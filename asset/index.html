@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heartbeat  – Tìm kiếm tình yêu</title>
+  <meta name="description" content="Heartbeat  – Ứng dụng hẹn hò hiện đại, kết nối những trái tim đơn độc." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ========== APP SHELL ========== -->
+<div id="app">
+  <div id="sidebar-overlay" class="hidden"></div>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside id="sidebar">
+    <div class="sidebar-logo">
+      <span class="flame">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      </span>
+      <span class="logo-text">Heartbeat</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button class="nav-btn active" id="nav-swipe" title="Khám phá">
+        <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        <span>Khám phá</span>
+      </button>
+      <button class="nav-btn" id="nav-matches" title="Kết nối">
+        <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+        <span>Kết nối</span>
+        <span class="badge">3</span>
+      </button>
+      <button class="nav-btn" id="nav-chat" title="Tin nhắn">
+        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        <span>Tin nhắn</span>
+        <span class="badge">5</span>
+      </button>
+      <button class="nav-btn" id="nav-heatmap" title="Map Heat">
+        <svg viewBox="0 0 24 24"><path d="M20.5 3l-5.5 2-6-2-5.5 2A1 1 0 0 0 3 5.9V20a1 1 0 0 0 1.36.94L9 19l6 2 5.5-2A1 1 0 0 0 21 18.1V4a1 1 0 0 0-.5-.87zM10 5.47l4 1.33v11.73l-4-1.33V5.47z"/></svg>
+        <span>Map Heat</span>
+      </button>
+      <button class="nav-btn" id="nav-profile" title="Hồ sơ">
+        <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/></svg>
+        <span>Hồ sơ</span>
+      </button>
+      <button class="nav-btn" id="nav-admin" title="Quản trị">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+        <span>Quản trị (Broker)</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <!-- Dark mode toggle -->
+      <div class="theme-toggle-row" id="theme-toggle-row">
+        <div class="theme-label">
+          <svg id="theme-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <!-- Moon icon (default – light mode) -->
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+          </svg>
+          <span id="theme-label-text">Chế độ tối</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="theme-toggle" />
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+
+      <div class="premium-badge">
+        <span>Nâng cấp Premium</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- ========== VIEW: SWIPE ========== -->
+    <section id="view-swipe" class="view active">
+      <div class="swipe-inner">
+
+      <div class="swipe-header">
+        <button class="icon-btn sidebar-toggle mobile-only" title="Menu">
+          <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+        <h1 class="swipe-title">Khám phá</h1>
+        <div class="swipe-filters">
+          <button class="filter-btn" id="btn-filter">
+            <svg viewBox="0 0 24 24"><path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"/></svg>
+            Bộ lọc
+          </button>
+        </div>
+      </div>
+
+      <div class="card-stack-wrapper">
+        <div id="card-stack" class="card-stack"></div>
+
+        <!-- Swipe overlay indicators -->
+        <div class="swipe-hint like" id="hint-like">💚 THÍCH</div>
+        <div class="swipe-hint nope" id="hint-nope">❌ BỎ QUA</div>
+        <div class="swipe-hint super" id="hint-super">⭐ SUPER</div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-bar">
+        <button class="action-btn rewind" id="btn-rewind" title="Quay lại">
+          <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+        </button>
+        <button class="action-btn nope" id="btn-nope" title="Bỏ qua">
+          <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+        <button class="action-btn super" id="btn-super" title="Super Like">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </button>
+        <button class="action-btn like" id="btn-like" title="Thích">
+          <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </button>
+        <button class="action-btn boost" id="btn-boost" title="Boost">
+          <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C7.81 18 6 15.21 6 12c0-4.08 3.05-7.44 7-7.93V2.05z"/></svg>
+        </button>
+      </div>
+
+      <!-- Empty state -->
+      <div id="empty-state" class="empty-state hidden">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" width="56" height="56" fill="#D2D2D7"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <h2>Hết hồ sơ rồi!</h2>
+        <p>Bạn đã xem hết mọi người trong khu vực. Mở rộng phạm vi tìm kiếm?</p>
+        <button class="btn-primary" id="btn-reset">Tải lại</button>
+      </div>
+
+      <!-- Unified Footer -->
+      <footer class="main-footer">
+        <div class="footer-grid">
+          <div class="footer-col about-col">
+            <h4 class="footer-logo">Heartbeat</h4>
+            <p class="footer-bio">Kết nối những trái tim chân thành. Tìm thấy tình yêu đích thực trong từng khoảnh khắc.</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/phuong.anh.343123" class="social-icon fb"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+              <a href="https://www.instagram.com/ph.anhthere_/" class="social-icon ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+              <a href="#" class="social-icon x"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Khám phá</h5>
+            <ul><li><a href="#">Về chúng tôi</a></li><li><a href="#">An toàn</a></li><li><a href="#">Blog</a></li></ul>
+          </div>
+          <div class="footer-col">
+            <h5>Pháp lý</h5>
+            <ul><li><a href="#">Điều khoản</a></li><li><a href="#">Bảo mật</a></li><li><a href="#">Liên hệ</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Heartbeat . Made with ❤️ in Vietnam.</p>
+        </div>
+      </footer>
+
+      </div><!-- /.swipe-inner -->
+    </section>
+
+    <!-- ========== VIEW: MAP HEAT DATING ========== -->
+    <section id="view-heatmap" class="view">
+      <div class="heatmap-page">
+        <div class="mobile-header mobile-only">
+          <button class="icon-btn sidebar-toggle" title="Menu">
+            <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+          <h1 class="swipe-title">Map Heat Dating</h1>
+        </div>
+
+        <div class="section-header heatmap-header">
+          <h1>Map Heat Dating</h1>
+          <p class="section-sub">Xem khu vực đang có nhiều người tương hợp gần bạn</p>
+        </div>
+
+        <div class="heatmap-content">
+          <div class="heatmap-card">
+            <div class="heatmap-legend">
+              <span>Mật độ thấp</span>
+              <div class="legend-bar"></div>
+              <span>Mật độ cao</span>
+            </div>
+            <div id="heatmap-grid" class="heatmap-grid"></div>
+          </div>
+
+          <div class="heatmap-side">
+            <div class="heatmap-stats-card">
+              <h3>Khu vực nổi bật</h3>
+              <div id="heatmap-hotspot-list" class="hotspot-list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== VIEW: MATCHES ========== -->
+    <section id="view-matches" class="view">
+      <div class="matches-inner">
+        <div class="mobile-header mobile-only">
+          <button class="icon-btn sidebar-toggle" title="Menu">
+            <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+          <h1 class="swipe-title">Kết nối</h1>
+        </div>
+
+        <!-- Premium: Liked-you teaser -->
+        <div class="likes-banner">
+        <div class="likes-banner-sparkle">💖</div>
+        <div class="likes-banner-avatars">
+          <div class="liked-avatar-blur" style="background:linear-gradient(135deg,#f093fb,#f5576c)">🌸</div>
+          <div class="liked-avatar-blur" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">🌺</div>
+          <div class="liked-avatar-blur" style="background:linear-gradient(135deg,#fa709a,#fee140)">🦋</div>
+          <div class="liked-avatar-blur" style="background:linear-gradient(135deg,#f7971e,#ffd200)">💎</div>
+        </div>
+        <div class="likes-banner-text" style="flex:1">
+          <h3>14 người đã thích bạn</h3>
+          <p>Nâng cấp Premium để xem<br>ai đang chờ bạn 💝</p>
+          <button class="likes-banner-btn">⭐ Mở khóa ngay</button>
+        </div>
+        <div class="likes-banner-count">+14</div>
+      </div>
+
+      <!-- Matches you have -->
+      <div class="matches-section-label">
+        <h2>Kết nối của bạn</h2>
+        <a>Xem tất cả</a>
+      </div>
+      <div id="matches-grid" class="matches-grid"></div>
+
+      <!-- Suggestions -->
+      <div class="matches-section-label">
+        <h2>Gợi ý cho bạn</h2>
+        <a>Khám phá thêm</a>
+      </div>
+      <div id="suggest-scroll" class="suggest-scroll"></div>
+      </div> <!-- /.matches-inner -->
+
+      <!-- Unified Footer -->
+      <footer class="main-footer">
+        <div class="footer-grid">
+          <div class="footer-col about-col">
+            <h4 class="footer-logo">Heartbeat</h4>
+            <p class="footer-bio">Kết nối những trái tim chân thành. Tìm thấy tình yêu đích thực trong từng khoảnh khắc.</p>
+            <div class="social-links">
+              <a href="#" class="social-icon fb"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+              <a href="#" class="social-icon ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+              <a href="#" class="social-icon x"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Khám phá</h5>
+            <ul><li><a href="#">Về chúng tôi</a></li><li><a href="#">An toàn</a></li><li><a href="#">Blog</a></li></ul>
+          </div>
+          <div class="footer-col">
+            <h5>Pháp lý</h5>
+            <ul><li><a href="#">Điều khoản</a></li><li><a href="#">Bảo mật</a></li><li><a href="#">Liên hệ</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Heartbeat. Made with ❤️ in Vietnam.</p>
+        </div>
+      </footer>
+
+    </section>
+
+    <!-- ========== VIEW: CHAT ========== -->
+    <section id="view-chat" class="view">
+      <div id="chat-list-panel" class="chat-list-panel">
+        <div class="section-header">
+          <button class="icon-btn sidebar-toggle mobile-only" title="Menu">
+            <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+          <h1>Tin nhắn</h1>
+          <button class="icon-btn" id="btn-new-group" title="Tạo nhóm">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </button>
+        </div>
+
+        <!-- Tabs -->
+        <div class="chat-tabs">
+          <button class="chat-tab active" data-tab="private">Cá nhân</button>
+          <button class="chat-tab" data-tab="group">Nhóm</button>
+        </div>
+
+        <div id="private-list" class="conversation-list"></div>
+        <div id="group-list" class="conversation-list hidden"></div>
+      </div>
+
+      <!-- Chat Window -->
+      <div id="chat-window" class="chat-window hidden">
+        <div class="chat-window-header">
+          <button class="back-btn" id="btn-back-chat">
+            <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+          </button>
+          <div class="chat-partner-info" id="chat-partner-info">
+            <div class="chat-avatar" id="chat-partner-avatar"></div>
+            <div>
+              <div class="chat-partner-name" id="chat-partner-name"></div>
+              <div class="chat-partner-status" id="chat-partner-status"></div>
+            </div>
+          </div>
+          <div class="chat-actions">
+            <button class="icon-btn" title="Gọi thoại">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </button>
+            <button class="icon-btn" title="Gọi video">
+              <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="messages-area" id="messages-area"></div>
+
+        <div class="message-input-bar">
+          <button class="icon-btn" title="Emoji">😊</button>
+          <input type="text" id="msg-input" placeholder="Nhắn tin..." autocomplete="off" />
+          <button class="icon-btn" title="Hình ảnh">
+            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+          </button>
+          <button class="send-btn" id="btn-send">
+            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== VIEW: MY PROFILE ========== -->
+    <section id="view-profile" class="view">
+      <div class="mobile-header mobile-only">
+        <button class="icon-btn sidebar-toggle" title="Menu">
+          <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+        <h1 class="swipe-title">Hồ sơ</h1>
+      </div>
+      <div class="my-profile-page">
+        <div class="my-profile-cover"></div>
+        <div class="my-profile-avatar-wrap">
+          <div class="my-profile-avatar" style="background: linear-gradient(135deg,#f093fb,#f5576c)">
+            <span style="font-size:2.5rem;">😊</span>
+          </div>
+          <button class="edit-avatar-btn">✏️</button>
+        </div>
+        <div class="my-profile-info">
+          <h2 class="my-name">Nguyễn Minh Tú <span class="verified">✓</span></h2>
+          <p class="my-age-loc">24 tuổi · Hà Nội</p>
+          <p class="my-bio">Thích du lịch 🌍, cà phê ☕ và những buổi chiều mưa 🌧️. Tìm người có thể cùng nhau khám phá thế giới.</p>
+
+          <div class="my-interests">
+            <span class="interest-tag">✈️ Du lịch</span>
+            <span class="interest-tag">☕ Cà phê</span>
+            <span class="interest-tag">📚 Đọc sách</span>
+            <span class="interest-tag">🎵 Âm nhạc</span>
+            <span class="interest-tag">🍜 Ẩm thực</span>
+            <span class="interest-tag">🏃 Chạy bộ</span>
+          </div>
+
+          <div class="profile-stats">
+            <div class="stat-item">
+              <div class="stat-num">142</div>
+              <div class="stat-label">Lượt thích</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">38</div>
+              <div class="stat-label">Kết nối</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">5</div>
+              <div class="stat-label">Super Like</div>
+            </div>
+          </div>
+
+          <button class="btn-primary btn-edit-profile">✏️ Chỉnh sửa hồ sơ</button>
+        </div>
+      </div>
+
+      <!-- Unified Footer -->
+      <footer class="main-footer">
+        <div class="footer-grid">
+          <div class="footer-col about-col">
+            <h4 class="footer-logo">Heartbeat</h4>
+            <p class="footer-bio">Kết nối những trái tim chân thành. Tìm thấy tình yêu đích thực trong từng khoảnh khắc.</p>
+            <div class="social-links">
+              <a href="#" class="social-icon fb"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+              <a href="#" class="social-icon ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+              <a href="#" class="social-icon x"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Khám phá</h5>
+            <ul><li><a href="#">Về chúng tôi</a></li><li><a href="#">An toàn</a></li><li><a href="#">Blog</a></li></ul>
+          </div>
+          <div class="footer-col">
+            <h5>Pháp lý</h5>
+            <ul><li><a href="#">Điều khoản</a></li><li><a href="#">Bảo mật</a></li><li><a href="#">Liên hệ</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Heartbeat. Made with ❤️ in Vietnam.</p>
+        </div>
+      </footer>
+    </section>
+
+    <!-- ========== VIEW: ADMIN (BROKER) ========== -->
+    <section id="view-admin" class="view">
+      <div class="mobile-header mobile-only">
+        <button class="icon-btn sidebar-toggle" title="Menu">
+          <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+        <h1 class="swipe-title">Quản trị</h1>
+      </div>
+
+      <div class="admin-dashboard">
+        <div class="section-header">
+          <h1>Hệ thống Môi giới (Broker)</h1>
+          <p class="section-sub">Quản lý người dùng và ghép đôi chủ động</p>
+        </div>
+
+        <!-- Dashboard Stats -->
+        <div class="admin-stats">
+          <div class="admin-stat-card">
+            <div class="admin-stat-val" id="admin-total-users">0</div>
+            <div class="admin-stat-label">Tổng thành viên</div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-val" id="admin-active-users">0</div>
+            <div class="admin-stat-label">Đang hoạt động</div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-val" id="admin-locked-users">0</div>
+            <div class="admin-stat-label">Tài khoản khóa</div>
+          </div>
+        </div>
+
+        <div class="admin-grid">
+          <!-- User Manager -->
+          <div class="admin-panel user-manager-panel">
+            <div class="panel-header">
+              <h3>Danh sách thành viên</h3>
+              <div class="panel-search">
+                <input type="text" id="admin-user-search" placeholder="Tìm tên, ID..." />
+              </div>
+            </div>
+            <div class="admin-user-list" id="admin-user-list">
+              <!-- JS populated as cards -->
+            </div>
+          </div>
+
+          <!-- Manual Match Tool -->
+          <div class="admin-panel manual-match-panel">
+            <div class="panel-header">
+              <h3>Ghép đôi chủ động (Manual Match)</h3>
+            </div>
+            <div class="match-tool-form">
+              <p class="tool-desc">Chọn 2 người dùng để tạo kết nối ngay lập tức kèm thông báo từ bạn.</p>
+              
+              <div class="form-group">
+                <label>Người dùng A</label>
+                <select id="match-user-a">
+                  <option value="">-- Chọn người dùng --</option>
+                </select>
+              </div>
+
+              <div class="match-link-icon">🔗</div>
+
+              <div class="form-group">
+                <label>Người dùng B</label>
+                <select id="match-user-b">
+                  <option value="">-- Chọn người dùng --</option>
+                </select>
+              </div>
+
+              <button class="btn-primary" id="btn-perform-match">Kết nối ngay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unified Footer -->
+      <footer class="main-footer">
+        <div class="footer-grid">
+          <div class="footer-col about-col">
+            <h4 class="footer-logo">Heartbeat</h4>
+            <p class="footer-bio">Kết nối những trái tim chân thành. Tìm thấy tình yêu đích thực trong từng khoảnh khắc.</p>
+            <div class="social-links">
+              <a href="#" class="social-icon fb"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+              <a href="#" class="social-icon ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+              <a href="#" class="social-icon x"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Khám phá</h5>
+            <ul><li><a href="#">Về chúng tôi</a></li><li><a href="#">An toàn</a></li><li><a href="#">Blog</a></li></ul>
+          </div>
+          <div class="footer-col">
+            <h5>Pháp lý</h5>
+            <ul><li><a href="#">Điều khoản</a></li><li><a href="#">Bảo mật</a></li><li><a href="#">Liên hệ</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Heartbeat. Made with ❤️ in Vietnam.</p>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+</div>
+
+<!-- ========== MODAL: PROFILE DETAIL ========== -->
+<div id="profile-modal" class="modal-overlay hidden">
+  <div class="modal-content profile-modal-content">
+    <button class="modal-close" id="btn-close-profile">✕</button>
+    <div id="profile-photos" class="profile-photos"></div>
+    <div class="profile-detail-info">
+      <div class="profile-detail-header">
+        <h2 id="detail-name"></h2>
+        <span id="detail-age" class="detail-age"></span>
+        <span class="verified">✓</span>
+      </div>
+      <p id="detail-location" class="detail-location">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span id="detail-location-text"></span>
+      </p>
+      <p id="detail-bio" class="detail-bio"></p>
+      <div id="detail-compatibility" class="detail-compatibility"></div>
+      <div id="detail-interests" class="my-interests"></div>
+      <div class="detail-info-grid">
+        <div class="info-item"><span class="info-icon">💼</span><span id="detail-job"></span></div>
+        <div class="info-item"><span class="info-icon">🎓</span><span id="detail-edu"></span></div>
+        <div class="info-item"><span class="info-icon">📏</span><span id="detail-height"></span></div>
+        <div class="info-item"><span class="info-icon">⭐</span><span id="detail-zodiac"></span></div>
+      </div>
+    </div>
+    <div class="profile-modal-actions">
+      <button class="action-btn nope modal-action" id="modal-nope">
+        <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+      <button class="action-btn super modal-action" id="modal-super">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </button>
+      <button class="action-btn like modal-action" id="modal-like">
+        <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ========== MODAL: MATCH CELEBRATION ========== -->
+<div id="match-modal" class="modal-overlay hidden">
+  <div class="match-modal-content">
+    <div class="match-burst"></div>
+    <h2 class="match-title">It's a Match ❤️</h2>
+    <p class="match-sub">Bạn và <span id="match-name"></span> đã thích nhau!</p>
+    <div class="match-avatars">
+      <div class="match-avatar my-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c)"><span>😊</span></div>
+      <div class="match-heart">❤️</div>
+      <div class="match-avatar" id="match-partner-avatar"></div>
+    </div>
+    <div class="match-buttons">
+      <button class="btn-secondary" id="btn-keep-swiping">Tiếp tục quẹt</button>
+      <button class="btn-primary" id="btn-send-message">Nhắn tin ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- ========== TOAST ========== -->
+<div id="toast" class="toast hidden"></div>
+
+<!-- Mobile Bottom Navigation -->
+<div id="mobile-bottom-nav" class="mobile-only">
+  <button class="nav-item active" data-view="swipe">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+    </div>
+  </button>
+  <button class="nav-item" data-view="matches">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+    </div>
+  </button>
+  <button class="nav-item" data-view="chat">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    </div>
+  </button>
+  <button class="nav-item" data-view="heatmap">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.5 3l-5.5 2-6-2-5.5 2A1 1 0 0 0 3 5.9V20a1 1 0 0 0 1.36.94L9 19l6 2 5.5-2A1 1 0 0 0 21 18.1V4a1 1 0 0 0-.5-.87zM10 5.47l4 1.33v11.73l-4-1.33V5.47z"/></svg>
+    </div>
+  </button>
+  <button class="nav-item" data-view="profile">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/></svg>
+    </div>
+  </button>
+  <button class="nav-item" data-view="admin">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+    </div>
+  </button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
