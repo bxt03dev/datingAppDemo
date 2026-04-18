@@ -1962,7 +1962,7 @@ function processPayment() {
     }
 
     $btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> Thành công!`;
-    showToast('✨ Thanh toán thành công! Đơn hàng của bạn đã được ghi lại.');
+    showToast('<i class="fa-solid fa-circle-check"></i> Thanh toán thành công! Đơn hàng của bạn đã được ghi lại.');
     
     setTimeout(() => {
       switchView('cart');
@@ -2048,7 +2048,7 @@ function renderOrderHistory() {
       </div>
       <div style="text-align: right;">
         <div style="font-weight: 850; font-size: 1.2rem; color: var(--text-primary); margin-bottom: 8px;">${order.price}</div>
-        <span class="status-badge paid">Đã thanh toán</span>
+        <span class="status-badge paid"><i class="fa-solid fa-circle-check"></i> Đã thanh toán</span>
       </div>
     </div>
   `).join('');
@@ -2147,7 +2147,7 @@ window.redeemVoucher = function(vId) {
   redeemedVouchers.push({ code: newCode, value: v.value });
   userCoins -= v.cost;
   
-  showToast(`🎁 Đổi quà thành công! Mã ${v.name}: ${newCode}`);
+  showToast(`<i class="fa-solid fa-circle-check"></i> Đổi quà thành công! Mã ${v.name}: ${newCode}`);
   renderCheckinGrid();
   navigator.clipboard.writeText(newCode);
 };
@@ -2330,7 +2330,7 @@ document.querySelector('.confirm-btn')?.addEventListener('click', () => {
     return;
   }
   const partner = profiles.find(p => p.id == partnerId);
-  showToast(`🚀 Đã xác nhận lịch hẹn với ${partner.name} thành công!`);
+  showToast(`<i class="fa-solid fa-circle-check"></i> Đã xác nhận lịch hẹn với ${partner.name} thành công!`);
 });
 
 // =====================================================
