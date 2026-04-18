@@ -21,7 +21,7 @@ const profiles = [
     zodiac: 'Bảo Bình ♒',
     emoji: '🌸',
     gradient: 'linear-gradient(135deg, #f093fb, #f5576c)',
-    photos: ['https://i.pravatar.cc/400?img=5', 'https://i.pravatar.cc/400?img=9', 'https://i.pravatar.cc/400?img=5'],
+    photos: ['img/ha_1.jpg', 'img/ha_2.jpg', 'img/ha_3.jpg'],
     isNew: true,
     status: 'active',
   },
@@ -38,7 +38,7 @@ const profiles = [
     zodiac: 'Bạch Dương ♈',
     emoji: '⚡',
     gradient: 'linear-gradient(135deg, #4facfe, #00f2fe)',
-    photos: ['https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11'],
+    photos: ['img/minh_1.jpg', 'img/minh_2.jpg', 'img/minh_3.jpg'],
     isNew: true,
     status: 'active',
   },
@@ -55,7 +55,7 @@ const profiles = [
     zodiac: 'Song Ngư ♓',
     emoji: '🌺',
     gradient: 'linear-gradient(135deg, #43e97b, #38f9d7)',
-    photos: ['https://i.pravatar.cc/400?img=9', 'https://i.pravatar.cc/400?img=5', 'https://i.pravatar.cc/400?img=9'],
+    photos: ['img/linh_1.jpg', 'img/linh_2.jpg', 'img/linh_3.jpg'],
     isNew: false,
     status: 'active',
   },
@@ -69,10 +69,7 @@ const profiles = [
     job: 'Bác sĩ tại BV Bạch Mai',
     education: 'ĐH Y Hà Nội',
     height: '174 cm',
-    zodiac: 'Thiên Bình ♎',
-    emoji: '🎵',
-    gradient: 'linear-gradient(135deg, #667eea, #764ba2)',
-    photos: ['https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11'],
+    photos: ['img/tuan_1.jpg', 'img/tuan_2.jpg', 'img/tuan_3.jpg'],
     isNew: false,
     status: 'active',
   },
@@ -89,7 +86,7 @@ const profiles = [
     zodiac: 'Kim Ngưu ♉',
     emoji: '🦋',
     gradient: 'linear-gradient(135deg, #fa709a, #fee140)',
-    photos: ['https://i.pravatar.cc/400?img=5', 'https://i.pravatar.cc/400?img=9', 'https://i.pravatar.cc/400?img=5'],
+    photos: ['img/an_1.jpg', 'img/an_2.jpg', 'img/an_3.jpg'],
     isNew: true,
     status: 'active',
   },
@@ -103,10 +100,7 @@ const profiles = [
     job: 'Senior Architect tại AIA',
     education: 'ĐH Kiến trúc Hà Nội',
     height: '180 cm',
-    zodiac: 'Ma Kết ♑',
-    emoji: '🏗️',
-    gradient: 'linear-gradient(135deg, #a18cd1, #fbc2eb)',
-    photos: ['https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11'],
+    photos: ['img/khoa_1.jpg', 'img/khoa_2.jpg', 'img/khoa_3.jpg'],
     isNew: false,
     status: 'active',
   },
@@ -123,7 +117,7 @@ const profiles = [
     zodiac: 'Xử Nữ ♍',
     emoji: '🌻',
     gradient: 'linear-gradient(135deg, #fddb92, #d1fdff)',
-    photos: ['https://i.pravatar.cc/400?img=9', 'https://i.pravatar.cc/400?img=5', 'https://i.pravatar.cc/400?img=9'],
+    photos: ['img/mai_1.jpg', 'img/mai_2.jpg', 'img/mai_3.jpg'],
     isNew: true,
     status: 'active',
   },
@@ -137,10 +131,7 @@ const profiles = [
     job: 'CEO tại TechVN Startup',
     education: 'NEU – Kinh tế Quốc dân',
     height: '176 cm',
-    zodiac: 'Sư Tử ♌',
-    emoji: '🚀',
-    gradient: 'linear-gradient(135deg, #0f3460, #533483)',
-    photos: ['https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11'],
+    photos: ['img/hung_1.jpg', 'img/hung_2.jpg', 'img/hung_3.jpg'],
     isNew: false,
     status: 'active',
   },
@@ -157,7 +148,7 @@ const profiles = [
     zodiac: 'Song Tử ♊',
     emoji: '💎',
     gradient: 'linear-gradient(135deg, #f7971e, #ffd200)',
-    photos: ['https://i.pravatar.cc/400?img=5', 'https://i.pravatar.cc/400?img=9', 'https://i.pravatar.cc/400?img=5'],
+    photos: ['img/trang_1.jpg', 'img/trang_2.jpg', 'img/trang_3.jpg'],
     isNew: true,
     status: 'active',
   },
@@ -171,13 +162,112 @@ const profiles = [
     job: 'Freelance Photographer',
     education: 'ĐH Khoa học Xã hội & Nhân văn',
     height: '172 cm',
-    zodiac: 'Nhân Mã ♐',
-    emoji: '📷',
-    gradient: 'linear-gradient(135deg, #2c3e50, #4ca1af)',
-    photos: ['https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11', 'https://i.pravatar.cc/400?img=11'],
+    photos: ['img/duc_1.jpg', 'img/duc_2.jpg', 'img/duc_3.jpg'],
     isNew: false,
     status: 'active',
   },
+  {
+    id: 11,
+    name: 'Yến',
+    age: 24,
+    location: 'Hà Nội, 5 km',
+    bio: 'Yêu mèo 🐱 và thích làm gốm. Đang học thạc sĩ tâm lý học.',
+    interests: ['🐱 Mèo', '🎨 Làm gốm', '🧠 Tâm lý học'],
+    job: 'Giáo viên mầm non',
+    education: 'ĐH Sư phạm Hà Nội',
+    height: '158 cm',
+    emoji: '🌙',
+    gradient: 'linear-gradient(135deg, #a18cd1, #fbc2eb)',
+    photos: ['img/yen_1.jpg', 'img/yen_2.jpg', 'img/yen_3.jpg'],
+    isNew: true, status: 'active'
+  },
+  {
+    id: 12,
+    name: 'Sơn',
+    age: 27,
+    location: 'TP.HCM, 2 km',
+    bio: 'Phượt thủ xuyên Việt 🏍️. Thích những cung đường đèo và cà phê sáng.',
+    interests: ['🏍️ Mô tô', '🏔️ Phượt', '☕ Cà phê'],
+    job: 'Video Editor',
+    education: 'RMIT University',
+    height: '175 cm',
+    gradient: 'linear-gradient(135deg, #ff9a9e, #fecfef)',
+    photos: ['img/son_1.jpg', 'img/son_2.jpg', 'img/son_3.jpg'],
+    isNew: false, status: 'active'
+  },
+  {
+    id: 13,
+    name: 'Ngọc',
+    age: 22,
+    location: 'Đà Nẵng, 10 km',
+    bio: 'Học thiết kế thời trang. Thích đi bộ trên bãi biển lúc hoàng hôn 🌅.',
+    interests: ['👗 Thời trang', '🎨 Vẽ', '🌊 Biển'],
+    job: 'Designer',
+    education: 'ĐH Kiến trúc Đà Nẵng',
+    height: '165 cm',
+    gradient: 'linear-gradient(135deg, #84fab0, #8fd3f4)',
+    photos: ['img/ngoc_1.jpg', 'img/ngoc_2.jpg', 'img/ngoc_3.jpg'],
+    isNew: true, status: 'active'
+  },
+  {
+    id: 14,
+    name: 'Hoàng',
+    age: 31,
+    location: 'Hà Nội, 1 km',
+    bio: 'Tín đồ công nghệ 💻. Thích chơi game, nghe podcast và tập gym.',
+    interests: ['🎮 Gaming', '🎧 Podcast', '💪 Gym'],
+    job: 'Project Manager',
+    education: 'ĐH Bách Khoa Hà Nội',
+    height: '182 cm',
+    gradient: 'linear-gradient(135deg, #fccb90, #d57eeb)',
+    photos: ['img/hoang_1.jpg', 'img/hoang_2.jpg', 'img/hoang_3.jpg'],
+    isNew: false, status: 'active'
+  },
+  {
+    id: 15,
+    name: 'Quỳnh',
+    age: 26,
+    location: 'TP.HCM, 6 km',
+    bio: 'Chuyên gia Marketing. Thích pilates 🤸 và trà sữa.',
+    interests: ['🤸 Pilates', '🧋 Trà sữa', '📱 Social Media'],
+    job: 'Marketing Specialist',
+    education: 'ĐH Kinh tế Luật',
+    height: '160 cm',
+    gradient: 'linear-gradient(135deg, #e0c3fc, #8ec5fc)',
+    photos: ['img/quynh_1.jpg', 'img/quynh_2.jpg', 'img/quynh_3.jpg'],
+    isNew: true, status: 'active'
+  },
+  {
+    id: 16,
+    name: 'Minh Anh', age: 23, location: 'Cần Thơ, 4 km', bio: 'Thích hát 🎤 và nấu ăn cho gia đình.',
+    interests: ['🎤 Hát', '🍳 Nấu ăn'], job: 'Content Writer', emoji: '🌟',
+    gradient: 'linear-gradient(135deg, #cfd9df, #e2ebf0)', isNew: true, status: 'active',
+    photos: ['img/minhanh.jpg']
+  },
+  {
+    id: 17, name: 'Văn', age: 29, location: 'Hải Phòng, 3 km', bio: 'Thợ xăm hình 🎨. Yêu nghệ thuật đường phố.',
+    interests: ['🎨 Tattoo', '🛹 Trượt ván'], job: 'Tattoo Artist', emoji: '💣',
+    gradient: 'linear-gradient(135deg, #667eea, #764ba2)', isNew: false, status: 'active',
+    photos: ['img/van.jpg']
+  },
+  {
+    id: 18, name: 'Phương', age: 25, location: 'Huế, 5 km', bio: 'Thích áo dài và thơ văn 📚. Rất dịu dàng.',
+    interests: ['📚 Văn học', '👗 Áo dài'], job: 'Hướng dẫn viên', emoji: '🎐',
+    gradient: 'linear-gradient(135deg, #cd9cf2, #f6f3ff)', isNew: true, status: 'active',
+    photos: ['img/phuong.jpg']
+  },
+  {
+    id: 19, name: 'Tú', age: 28, location: 'Bình Dương, 15 km', bio: 'Kỹ sư cơ khí. Đam mê câu cá 🎣.',
+    interests: ['🎣 Câu cá', '🛠️ Kỹ thuật'], job: 'Mechanical Engineer', emoji: '⚙️',
+    gradient: 'linear-gradient(135deg, #fdfcfb, #e2d1c3)', isNew: false, status: 'active',
+    photos: ['img/tu.jpg']
+  },
+  {
+    id: 20, name: 'Hương', age: 24, location: 'Vũng Tàu, 2 km', bio: 'Yêu biển và lướt ván 🏄‍♀️.',
+    interests: ['🏄‍♀️ Lướt ván', '🌊 Biển'], job: 'Freelancer', emoji: '🍒',
+    gradient: 'linear-gradient(135deg, #f093fb, #f5576c)', isNew: true, status: 'active',
+    photos: ['img/huong.jpg']
+  }
 ];
 
 const privateChats = [
@@ -186,6 +276,7 @@ const privateChats = [
     name: 'Linh 🌸',
     emoji: '🌸',
     gradient: 'linear-gradient(135deg, #f093fb, #f5576c)',
+    photo: 'img/linh_1.jpg',
     online: true,
     lastMsg: 'Tuần này anh có rảnh không? 😊',
     time: '2 phút',
@@ -207,6 +298,7 @@ const privateChats = [
     name: 'Hà 🌺',
     emoji: '🌺',
     gradient: 'linear-gradient(135deg, #43e97b, #38f9d7)',
+    photo: 'img/ha_1.jpg',
     online: true,
     lastMsg: 'ảnh đó đẹp quá anh ơi!',
     time: '15 phút',
@@ -227,6 +319,7 @@ const privateChats = [
     name: 'Mai 🌻',
     emoji: '🌻',
     gradient: 'linear-gradient(135deg, #fddb92, #d1fdff)',
+    photo: 'img/mai_1.jpg',
     online: false,
     lastMsg: 'Bánh của mình làm xong rồi nè!',
     time: '1 giờ',
@@ -245,6 +338,7 @@ const privateChats = [
     name: 'Trang 💎',
     emoji: '💎',
     gradient: 'linear-gradient(135deg, #f7971e, #ffd200)',
+    photo: 'img/trang_1.jpg',
     online: true,
     lastMsg: 'Mình có show diễn tối thứ 7 này!',
     time: '3 giờ',
@@ -262,6 +356,7 @@ const privateChats = [
     name: 'An 🦋',
     emoji: '🦋',
     gradient: 'linear-gradient(135deg, #fa709a, #fee140)',
+    photo: 'img/an_1.jpg',
     online: false,
     lastMsg: 'hahhaha ừ mình lạc đường thật 😂',
     time: 'Hôm qua',
@@ -282,9 +377,10 @@ const privateChats = [
 const groupChats = [
   {
     id: 'g1',
-    name: '🔥 Heartbeat  Hà Nội',
+    name: '🔥 Heartbeat Hà Nội',
     emoji: '🔥',
     gradient: 'linear-gradient(135deg, #fd5068, #a855f7)',
+    photo: 'img/hung_1.jpg',
     isGroup: true,
     members: 248,
     lastMsg: 'Minh: Có ai rảnh cuối tuần không?',
@@ -346,6 +442,7 @@ let currentView = 'swipe';
 let activeChatId = null;
 let activeChatType = 'private';
 let isSwiping = false;
+let isLoggedIn = false;
 const myInterests = ['✈️ Du lịch', '☕ Cà phê', '📚 Đọc sách', '🎵 Âm nhạc', '🍜 Ẩm thực', '🏃 Chạy bộ'];
 
 function normalizeInterest(interest) {
@@ -414,29 +511,87 @@ const $sidebarOverlay = document.getElementById('sidebar-overlay');
 const $mobileBottomNav = document.getElementById('mobile-bottom-nav');
 
 // =====================================================
+//  AUTHENTICATION LOGIC (NEW)
+// =====================================================
+function handleLogin(e) {
+  if (e) e.preventDefault();
+  
+  const $user = document.getElementById('login-username');
+  const $pass = document.getElementById('login-password');
+  const user = $user.value.trim();
+  const pass = $pass.value.trim();
+
+  // Reset errors
+  $user.classList.remove('error');
+  $pass.classList.remove('error');
+
+  if (!user || !pass) {
+    if (!user) $user.classList.add('error');
+    if (!pass) $pass.classList.add('error');
+    showToast('⚠️ Vui lòng nhập đầy đủ tài khoản và mật khẩu!');
+    return;
+  }
+
+  // Mock Authentication
+  isLoggedIn = true;
+  showToast('<i class="fa-solid fa-circle-check"></i> Đăng nhập thành công! Chào mừng bạn quay lại.', 'success');
+  switchView('swipe');
+}
+
+function handleSocialLogin(provider) {
+  let name = 'Google';
+  if (provider === 'facebook') name = 'Facebook';
+  if (provider === 'instagram') name = 'Instagram';
+  
+  isLoggedIn = true;
+  showToast(`<i class="fa-solid fa-circle-check"></i> Đăng nhập bằng ${name} thành công!`, 'success');
+  switchView('swipe');
+}
+
+function logout() {
+  isLoggedIn = false;
+  closeSidebar();
+  showToast('<i class="fa-solid fa-circle-check"></i> Bạn đã đăng xuất thành công.', 'success');
+  switchView('login');
+}
+
+// =====================================================
 //  NAVIGATION
 // =====================================================
-document.querySelectorAll('.nav-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const viewId = {
-      'nav-swipe': 'swipe',
-      'nav-matches': 'matches',
-      'nav-chat': 'chat',
-      'nav-heatmap': 'heatmap',
-      'nav-profile': 'profile',
-      'nav-admin': 'admin',
-    }[btn.id];
-    if (viewId) {
-      switchView(viewId);
-      if (viewId === 'admin') renderAdminDashboard();
-      if (viewId === 'heatmap') renderHeatMap();
-      // Close sidebar on mobile after clicking
-      if (window.innerWidth <= 660) {
-        closeSidebar();
+// Consolidated Navigation Logic
+function setupNavigation() {
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const viewId = btn.id.replace('nav-', '');
+      if (viewId) {
+        switchView(viewId);
       }
-    }
+    });
   });
-});
+
+  // Mobile Bottom Nav Click Handlers
+  document.querySelectorAll('#mobile-bottom-nav .nav-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const view = btn.dataset.view;
+      if (view) {
+        switchView(view);
+      }
+    });
+  });
+
+  // Login Form Submission
+  document.getElementById('login-form')?.addEventListener('submit', handleLogin);
+
+  // Clear errors on input
+  const $userInput = document.getElementById('login-username');
+  const $passInput = document.getElementById('login-password');
+  [$userInput, $passInput].forEach(el => {
+    el?.addEventListener('input', () => el.classList.remove('error'));
+  });
+
+  // Logout Button
+  document.getElementById('btn-logout-sidebar')?.addEventListener('click', logout);
+}
 
 // --- SIDEBAR TOGGLE ---
 function openSidebar() {
@@ -471,44 +626,69 @@ $sidebarOverlay.addEventListener('click', closeSidebar);
 
 
 function switchView(viewId) {
+  if (!viewId) return;
+  
+  // Hide Bottom Nav if Logged Out (on Login View)
+  if (viewId === 'login') {
+    if ($mobileBottomNav) $mobileBottomNav.classList.add('hidden');
+    // Also hide sidebar for login view if open
+    $sidebar?.classList.remove('open');
+  } else if (!isLoggedIn && viewId !== 'login') {
+    // Prevent unauthorized access in demo if needed, 
+    // but for this task we'll just allow it after the login mock.
+  }
+
   currentView = viewId;
   
-  // Update Views
-  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-  document.getElementById('view-' + viewId).classList.add('active');
+  const targetId = 'view-' + viewId;
+  const targetView = document.getElementById(targetId);
   
-  // Sync Sidebar
+  if (!targetView) {
+    console.warn(`View not found: ${targetId}`);
+    return;
+  }
+  
+  // Update visibility
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  targetView.classList.add('active');
+  
+  // Sync Nav Sidebar
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('nav-' + viewId)?.classList.add('active');
   
   // Sync Mobile Bottom Nav
-  document.querySelectorAll('#mobile-bottom-nav .nav-item').forEach(i => {
-    i.classList.toggle('active', i.dataset.view === viewId);
-  });
-
-  // On mobile, hide floating bottom nav in chat view
   if ($mobileBottomNav) {
-    const shouldHideBottomNav = window.innerWidth <= 660 && viewId === 'chat';
+    document.querySelectorAll('#mobile-bottom-nav .nav-item').forEach(i => {
+      i.classList.toggle('active', i.dataset.view === viewId);
+    });
+
+    const shouldHideBottomNav = window.innerWidth <= 660 && (viewId === 'chat' || viewId === 'checkout');
     $mobileBottomNav.classList.toggle('hidden', shouldHideBottomNav);
   }
 
-  if (viewId === 'heatmap') {
-    renderHeatMap();
+  // Trigger Renders
+  try {
+    if (viewId === 'swipe') renderCards();
+    if (viewId === 'feed') renderFeed();
+    if (viewId === 'checkin') renderCheckinGrid();
+    if (viewId === 'matches') { renderMatchesGrid(); renderSuggestions(); }
+    if (viewId === 'chat') renderChatList('private');
+    if (viewId === 'heatmap') renderHeatMap();
+    if (viewId === 'schedule') renderCalendar();
+    if (viewId === 'cart') renderCart('eat');
+    if (viewId === 'admin') renderAdminDashboard();
+  } catch (e) {
+    console.error(`Error rendering view ${viewId}:`, e);
   }
 
-  // Close sidebar on mobile after switching
+  // Close sidebar on mobile
   if (window.innerWidth <= 660) {
     closeSidebar();
   }
 }
 
-// Mobile Bottom Nav Click Handlers
-document.querySelectorAll('#mobile-bottom-nav .nav-item').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const view = btn.dataset.view;
-    switchView(view);
-  });
-});
+// Setup Mobile Nav Click Handlers is now inside setupNavigation()
+
 
 // =====================================================
 //  CARD RENDERING
@@ -556,7 +736,9 @@ function buildCard(profile, index) {
     </div>
     <div class="card-gradient"></div>
     ${dots.outerHTML}
-    <button class="card-expand-btn" data-id="${profile.id}" title="Xem hồ sơ">ℹ️</button>
+    <button class="card-expand-btn" data-id="${profile.id}" title="Xem hồ sơ">
+      <svg viewBox="0 0 24 24"><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/></svg>
+    </button>
     <div class="card-info">
       <div class="compat-badge">✨ ${compat.score}% hợp nhau</div>
       <div class="card-name-age">
@@ -889,24 +1071,34 @@ document.getElementById('btn-send-message').addEventListener('click', () => {
 // =====================================================
 //  MATCHES GRID + SUGGESTIONS
 // =====================================================
-function renderMatchesGrid() {
+function renderMatchesGrid(filter = '') {
   $matchesGrid.innerHTML = '';
-  // Show first 6 as "matches"
-  profiles.slice(0, 6).forEach(p => {
+  // Show first 8 as "matches"
+  const matchedProfiles = profiles.slice(0, 8); 
+  
+  const filtered = matchedProfiles.filter(p => p.name.toLowerCase().includes(filter.toLowerCase()));
+
+  if (filtered.length === 0) {
+    $matchesGrid.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+        <p>Không tìm thấy kết nối nào phù hợp.</p>
+      </div>
+    `;
+    return;
+  }
+
+  filtered.forEach(p => {
     const card = document.createElement('div');
     card.className = 'match-card';
     card.innerHTML = `
-      <div class="match-card-bg" style="background:${p.gradient}">
-        ${p.photos && p.photos.length > 0
-          ? `<img src="${p.photos[0]}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.remove()">`
-          : `<span>${p.emoji}</span>`}
+      ${p.photos && p.photos.length > 0
+        ? `<img src="${p.photos[0]}" alt="${p.name}" onerror="this.src='https://ui-avatars.com/api/?name=${p.name}&background=random'">`
+        : `<div style="background:${p.gradient};width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem"><span>${p.emoji}</span></div>`}
+      <div class="match-card-overlay">
+        <h4>${p.name}, ${p.age}</h4>
+        <p>${p.job}</p>
       </div>
-      <div class="match-card-gradient"></div>
-      ${p.isNew ? '<div class="match-new-badge">Mới</div>' : ''}
-      <div class="match-card-info">
-        <div class="match-card-name">${p.name}</div>
-        <div class="match-card-age">${p.age} tuổi</div>
-      </div>
+      ${p.isNew ? '<div class="match-new-badge" style="position:absolute;top:12px;left:12px; background:var(--apple-pink); color:white; padding:4px 8px; border-radius:10px; font-size:0.7rem; font-weight:700;">Mới</div>' : ''}
     `;
     card.addEventListener('click', () => openProfileModal(p));
     $matchesGrid.appendChild(card);
@@ -919,33 +1111,29 @@ function renderSuggestions() {
   const $scroll = document.getElementById('suggest-scroll');
   if (!$scroll) return;
   $scroll.innerHTML = '';
-  // Use remaining profiles (7-10) as suggestions
-  profiles.slice(6).forEach(p => {
+  
+  // Use next slice for suggestions
+  profiles.slice(8, 20).forEach(p => {
     const card = document.createElement('div');
-    card.className = 'suggest-card';
+    card.className = 'match-card suggest-card'; // Reuse match-card style
     card.innerHTML = `
-      <div class="suggest-card-photo" style="background:${p.gradient}">
-        ${p.photos && p.photos.length > 0
-          ? `<img src="${p.photos[0]}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">`
-          : `<span>${p.emoji}</span>`}
-      </div>
-      <div class="suggest-card-info">
-        <div class="suggest-card-name">${p.name}, ${p.age}</div>
-        <div class="suggest-card-dist">📍 ${p.location.split(',')[1]?.trim() || p.location}</div>
-        <button class="suggest-card-like">💚 Thích</button>
+      ${p.photos && p.photos.length > 0
+        ? `<img src="${p.photos[0]}" alt="${p.name}" onerror="this.src='https://ui-avatars.com/api/?name=${p.name}&background=random'">`
+        : `<div style="background:${p.gradient};width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem"><span>${p.emoji}</span></div>`}
+      <div class="match-card-overlay">
+        <h4>${p.name}, ${p.age}</h4>
+        <p>📍 ${p.location.split(',')[1]?.trim() || p.location}</p>
       </div>
     `;
-    card.querySelector('.suggest-card-like').addEventListener('click', (e) => {
-      e.stopPropagation();
-      showToast(`💚 Bạn đã thích ${p.name}!`);
-      card.style.transform = 'scale(0.9)';
-      card.style.opacity = '0.5';
-      setTimeout(() => card.remove(), 400);
-    });
     card.addEventListener('click', () => openProfileModal(p));
     $scroll.appendChild(card);
   });
 }
+
+// Search Logic for Matches
+document.getElementById('matches-search-input')?.addEventListener('input', (e) => {
+  renderMatchesGrid(e.target.value);
+});
 
 // =====================================================
 //  MAP HEAT DATING
@@ -973,35 +1161,92 @@ function renderHeatMap() {
     .map(([area, count]) => ({
       area,
       count,
-      score: Math.min(99, 58 + count * 12 + (area.length % 9))
+      score: Math.min(99, 65 + count * 8 + (area.length % 10))
     }))
     .sort((a, b) => b.count - a.count);
 
-  // Render hotspot side list
-  $heatmapHotspotList.innerHTML = hotspots.slice(0, 6).map((h, idx) => `
+  // Render hotspot side list with vibrancy bars
+  $heatmapHotspotList.innerHTML = hotspots.slice(0, 5).map((h, idx) => `
     <div class="hotspot-item">
-      <div class="hotspot-title">#${idx + 1} ${h.area}</div>
-      <div class="hotspot-sub">${h.count} người hoạt động · độ sôi động ${h.score}%</div>
+      <div class="hotspot-header">
+        <div class="hotspot-title">${h.area}</div>
+        <div class="hotspot-badge">Hot now</div>
+      </div>
+      <div class="vibrancy-bar-container">
+        <div class="vibrancy-bar" style="width: ${h.score}%"></div>
+      </div>
+      <div class="hotspot-meta">
+        <span><i class="fa-solid fa-fire"></i> ${h.score}%</span>
+        <span><i class="fa-solid fa-users"></i> ${h.count} active</span>
+      </div>
     </div>
   `).join('');
+
+  // Populate Live Feed (Desktop Only)
+  const $liveFeed = document.querySelector('.live-activity-feed');
+  if ($liveFeed) {
+    const logTemplates = [
+      "DETECT: User match in {area}",
+      "SIGNAL: Peak activity in {area}",
+      "ACCESS: New node active in {area}",
+      "SYNC: Area {area} vibrancy calibrated",
+      "MONITOR: Presence surge detected in {area}"
+    ];
+    
+    // Initial logs
+    $liveFeed.innerHTML = Array.from({length: 4}).map(() => {
+        const area = hotspots[Math.floor(Math.random() * hotspots.length)]?.area || "Hà Nội";
+        const template = logTemplates[Math.floor(Math.random() * logTemplates.length)];
+        return `<div class="live-log">${template.replace('{area}', area)}</div>`;
+    }).join('');
+
+    // Dynamic rotation if not already set
+    if (!window._heatmapInterval) {
+        window._heatmapInterval = setInterval(() => {
+            if (currentView !== 'heatmap') return;
+            const area = hotspots[Math.floor(Math.random() * hotspots.length)]?.area || "Hà Nội";
+            const template = logTemplates[Math.floor(Math.random() * logTemplates.length)];
+            const newLog = document.createElement('div');
+            newLog.className = 'live-log';
+            newLog.style.opacity = '0';
+            newLog.innerText = template.replace('{area}', area);
+            $liveFeed.prepend(newLog);
+            setTimeout(() => newLog.style.opacity = '1', 50);
+            if ($liveFeed.children.length > 5) $liveFeed.lastElementChild.remove();
+        }, 4000);
+    }
+  }
 
   // Create heat cells (32 cells), distributed by hotspots
   const cells = [];
   const hotspotPool = hotspots.length > 0 ? hotspots : [{ area: 'Khu vực khác', count: 1, score: 50 }];
+
+  // Define some landmarks for atmosphere
+  const landmarks = {
+    4: 'Hồ Tây',
+    11: 'Phố Cổ',
+    18: 'Cầu Giấy',
+    27: 'Ba Đình',
+    9: 'Hoàn Kiếm',
+    22: 'Tây Hồ'
+  };
+
   for (let i = 0; i < 32; i++) {
+    const idx = i + 1;
     const ref = hotspotPool[i % hotspotPool.length];
     const variance = ((i * 13) % 3) - 1;
     const count = Math.max(1, ref.count + variance);
     cells.push({
       area: ref.area,
       count,
-      level: getHeatLevel(count)
+      level: getHeatLevel(count),
+      landmark: landmarks[idx] || null
     });
   }
 
   $heatmapGrid.innerHTML = cells.map((cell, idx) => `
-    <button class="heat-cell ${cell.level}" data-area="${cell.area}" data-count="${cell.count}" title="${cell.area}">
-      <span>${idx + 1}</span>
+    <button class="heat-cell ${cell.level}" data-area="${cell.area}" data-count="${cell.count}">
+      ${cell.landmark ? `<span class="landmark-name">${cell.landmark}</span>` : ''}
       <span class="count">${cell.count}</span>
     </button>
   `).join('');
@@ -1009,10 +1254,8 @@ function renderHeatMap() {
   $heatmapGrid.querySelectorAll('.heat-cell').forEach(cell => {
     cell.addEventListener('click', () => {
       const area = cell.dataset.area;
-      const count = parseInt(cell.dataset.count || '0', 10);
-      const areaProfiles = profiles.filter(p => getAreaLabel(p.location) === area);
-      const sample = areaProfiles[Math.floor(Math.random() * Math.max(areaProfiles.length, 1))];
-      showToast(`📍 ${area}: ${count} điểm nóng. ${sample ? 'Nổi bật: ' + sample.name : 'Hãy khám phá ngay!'}`);
+      const count = cell.dataset.count;
+      showToast(`📍 <b>${area}</b>: Khu vực đang có <b>${count}</b> người hoạt động. Hãy bắt đầu kết nối ngay!`);
     });
   });
 }
@@ -1034,8 +1277,8 @@ function renderChatList(type) {
     const avatarClass = conv.isGroup ? 'conv-avatar group-avatar' : 'conv-avatar';
 
     item.innerHTML = `
-      <div class="${avatarClass}" style="background:${conv.gradient}">
-        ${conv.emoji}
+      <div class="${avatarClass}" style="${conv.photo ? `background: url(${conv.photo}) center/cover no-repeat;` : `background:${conv.gradient}`}">
+        ${conv.photo ? '' : conv.emoji}
         ${onlineDot}
       </div>
       <div class="conv-body">
@@ -1062,8 +1305,13 @@ function openChat(conv, type) {
 
   // Set header
   const $avatar = document.getElementById('chat-partner-avatar');
-  $avatar.style.background = conv.gradient;
-  $avatar.textContent = conv.emoji;
+  if (conv.photo) {
+    $avatar.style.background = `url(${conv.photo}) center/cover no-repeat`;
+    $avatar.textContent = '';
+  } else {
+    $avatar.style.background = conv.gradient;
+    $avatar.textContent = conv.emoji;
+  }
   document.getElementById('chat-partner-name').textContent = conv.name;
   document.getElementById('chat-partner-status').textContent = conv.isGroup
     ? `${conv.members} thành viên`
@@ -1115,8 +1363,13 @@ function renderMessages(messages, isGroup) {
     if (msg.from !== 'me') {
       const mini = document.createElement('div');
       mini.className = 'msg-mini-avatar';
-      mini.style.background = msg.sGrad || 'linear-gradient(135deg,#f093fb,#f5576c)';
-      mini.textContent = msg.sEmoji || '🙂';
+      if (msg.sPhoto) {
+        mini.style.background = `url(${msg.sPhoto}) center/cover no-repeat`;
+        mini.textContent = '';
+      } else {
+        mini.style.background = msg.sGrad || 'linear-gradient(135deg,#f093fb,#f5576c)';
+        mini.textContent = msg.sEmoji || '🙂';
+      }
       wrap.appendChild(mini);
     }
 
@@ -1130,11 +1383,11 @@ function renderMessages(messages, isGroup) {
     timeEl.textContent = msg.time.includes(':') ? msg.time.split(':').slice(0,2).join(':') : msg.time;
 
     wrap.appendChild(bubble);
-    wrap.appendChild(timeEl);
     group.appendChild(wrap);
-
+    group.appendChild(timeEl);
     $messagesArea.appendChild(group);
   });
+
 
   // Scroll to bottom
   $messagesArea.scrollTop = $messagesArea.scrollHeight;
@@ -1170,7 +1423,10 @@ function sendMessage() {
       'Thú vị thật, kể tiếp đi!', '😂 Trời ơi!', 'Cảm ơn nha 🥰',
     ];
     const reply = replies[Math.floor(Math.random() * replies.length)];
-    const replyMsg = { id: 'm' + Date.now(), from: 'them', text: reply, time: timeStr, sEmoji: conv.emoji, sGrad: conv.gradient };
+    const replyMsg = { 
+      id: 'm' + Date.now(), from: 'them', text: reply, time: timeStr, 
+      sEmoji: conv.emoji, sGrad: conv.gradient, sPhoto: conv.photo 
+    };
     conv.messages.push(replyMsg);
     conv.lastMsg = reply;
     renderMessages(conv.messages, conv.isGroup);
@@ -1205,9 +1461,11 @@ document.querySelectorAll('.chat-tab').forEach(tab => {
 //  TOAST
 // =====================================================
 let toastTimer = null;
-function showToast(msg) {
-  $toast.textContent = msg;
-  $toast.classList.remove('hidden');
+function showToast(msg, type = '') {
+  $toast.innerHTML = msg;
+  $toast.classList.remove('hidden', 'success');
+  if (type) $toast.classList.add(type);
+  
   $toast.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => {
@@ -1241,7 +1499,7 @@ function renderAdminDashboard() {
     card.className = 'admin-user-card';
     card.innerHTML = `
       <div class="user-info">
-        <div class="user-avatar-mini" style="background:${p.gradient}">${p.emoji}</div>
+        <div class="user-avatar-mini" style="background: url(${p.photos[0]}) center/cover no-repeat"></div>
         <div class="user-details">
           <span class="user-name">${p.name}</span>
           <span class="user-job-mini">${p.job}</span>
@@ -1321,10 +1579,11 @@ document.getElementById('btn-perform-match')?.addEventListener('click', () => {
   };
 
   const newChat = {
-    id: document.id = newChatId,
+    id: newChatId,
     name: `${userA.name} & ${userB.name} (Broker Match)`,
     emoji: '💎',
     gradient: 'linear-gradient(135deg, #f7971e, #ffd200)',
+    photo: 'img/an.png',
     online: true,
     lastMsg: 'Người môi giới đã kết nối bạn!',
     time: 'Vừa xong',
@@ -1377,22 +1636,778 @@ $themeToggle?.addEventListener('change', () => {
   applyTheme($themeToggle.checked);
 });
 
-// Cũng toggle khi click vào cả dòng (label row)
+// Also toggle when click into the whole row (label row)
 document.getElementById('theme-toggle-row')?.addEventListener('click', (e) => {
   if (e.target === $themeToggle || e.target.closest('label')) return;
   $themeToggle.click();
 });
 
 // =====================================================
+//  THREADS MODAL LOGIC
+// =====================================================
+const $threadModal = document.getElementById('thread-composer-modal');
+const $threadInput = document.getElementById('thread-input');
+const $btnPublish = document.getElementById('btn-publish-thread');
+
+document.getElementById('feed-composer-trigger')?.addEventListener('click', () => {
+  if ($threadModal) {
+    $threadModal.classList.remove('hidden');
+    $threadInput.focus();
+  }
+});
+
+document.getElementById('btn-close-thread')?.addEventListener('click', () => {
+  $threadModal.classList.add('hidden');
+});
+
+$threadInput?.addEventListener('input', (e) => {
+  const hasText = e.target.value.trim().length > 0;
+  $btnPublish.disabled = !hasText;
+});
+
+$btnPublish?.addEventListener('click', () => {
+  const content = $threadInput.value.trim();
+  if (!content) return;
+
+  const newPost = {
+    id: Date.now(),
+    author: "Nguyễn Minh Tú",
+    handle: "@minhtu.nguyen",
+    avatar: "😊",
+    content: content,
+    likes: 0,
+    replies: 0,
+    time: "Vừa xong"
+  };
+
+  socialData.unshift(newPost);
+  renderFeed();
+  renderMyPosts();
+  
+  // Reset and close
+  $threadInput.value = '';
+  $btnPublish.disabled = true;
+  $threadModal.classList.add('hidden');
+  showToast('✨ Thread của bạn đã được đăng thành công!');
+});
+
+// Close modal when clicking outside of the thread card
+$threadModal?.addEventListener('click', (e) => {
+  if (e.target === $threadModal) {
+    $threadModal.classList.add('hidden');
+  }
+});
+
+// =====================================================
+//  SCHEDULE & CART LOGIC
+// =====================================================
+
+const datingCombos = {
+  eat: [
+    { 
+      id: 1, name: 'Fine dining', price: '1,200,000đ', img: 'img/finedining.jpg',
+      desc: 'Bàn tiệc nến tại nhà hàng view hồ Tây cực chilled',
+      details: 'Trải nghiệm một buổi tối không thể quên với bàn tiệc cao cấp được trang trí bằng hoa tươi và nến thơm. Thực đơn 5 món phong cách Châu Âu kết hợp cùng rượu vang thượng hạng, tất cả trong không gian lãng mạn nhìn ra mặt hồ lấp lánh.',
+      includes: ['Thực đơn 5 món cho 2 người', '1 chai vang đỏ/trắng', 'Trang trí nến & hoa', 'View mặt hồ ưu tiên'],
+      address: 'Phường Quảng An, Quận Tây Hồ, Hà Nội'
+    },
+    { 
+      id: 2, name: 'Old Quarter Afternoon Tea', price: '450,000đ', img: 'img/cafe.jpg',
+      desc: 'Không gian yên tĩnh, trà ngon & bánh ngọt phong cách Pháp',
+      details: 'Tận hưởng nhịp sống chậm giữa lòng phố cổ náo nhiệt. Set trà chiều bao gồm các loại trà thượng hạng chọn lọc và tháp bánh ngọt, bánh mặn được làm thủ công mỗi ngày. Một không gian hoàn hảo để trò chuyện và thấu hiểu nhau hơn.',
+      includes: ['1 tháp bánh ngọt & mặn', 'Bình trà lớn (tự chọn vị)', 'Không gian yên tĩnh riêng tư', 'Nhạc không lời thư giãn'],
+      address: 'Phố Hàng Khay, Quận Hoàn Kiếm, Hà Nội'
+    },
+    { 
+      id: 3, name: 'Street Food Tour', price: '300,000đ', img: 'img/streetfood.jpg',
+      desc: 'Khám phá 5 món ngon vỉa hè nổi tiếng cùng hướng dẫn viên',
+      details: 'Dành cho những cặp đôi yêu thích sự trải nghiệm và ẩm thực địa phương. Hướng dẫn viên sẽ dẫn bạn qua những ngõ nhỏ để thưởng thức 5 món ăn huyền thoại của Hà Nội mà chỉ người bản địa mới biết. Một buổi hẹn hò đầy màu sắc và hương vị.',
+      includes: ['5 món ăn đặc sản', 'Đồ uống đi kèm mỗi món', 'Hướng dẫn viên nhiệt tình', 'Quà lưu niệm nhỏ'],
+      address: 'Khu vực Phố Cổ Hà Nội'
+    },
+  ],
+  play: [
+    { 
+      id: 4, name: 'Pottery Workshop', price: '600,000đ', img: 'img/workshop_gom_1.jpg',
+      desc: 'Cùng nhau tạo nên những kỷ niệm bằng đất sét tại studio nghệ thuật',
+      details: 'Gửi gắm tình cảm vào những tác phẩm đất sét tự tay làm. Bạn và người ấy sẽ được nghệ nhân hướng dẫn từng bước từ nhào đất đến xoay gốm trên bàn xoay chuyên nghiệp. Một trải nghiệm gắn kết và mang về những món đồ lưu niệm ý nghĩa.',
+      includes: ['2.5 giờ workshop', 'Nguyên liệu đất sét không giới hạn', 'Nghệ nhân hướng dẫn', 'Thành phẩm được nung & tráng men'],
+      address: 'Làng gốm Bát Tràng / Studio Tây Hồ'
+    },
+    { 
+      id: 5, name: 'Private Cinema Experience', price: '800,000đ', img: 'img/rapphim_1.jpg',
+      desc: 'Phòng chiếu cao cấp dành cho 2 người với sofa da êm ái',
+      details: 'Không gian điện ảnh chỉ dành riêng cho hai người. Hệ thống âm thanh vòm Dolby Atmos và màn hình 4K HDR mang lại trải nghiệm xem phim đỉnh cao. Sofa đôi cao cấp và dịch vụ phục vụ đồ ăn tại chỗ giúp buổi hẹn hò trở nên riêng tư tuyệt đối.',
+      includes: ['2 vé xem phim (tùy chọn)', 'Bắp nước tiêu chuẩn', 'Phòng chiếu riêng biệt', 'Phục vụ tại phòng'],
+      address: 'Các rạp CGV/Lotte cao cấp toàn quốc'
+    },
+    { 
+      id: 6, name: 'Chèo Sup hoàng hôn', price: '700,000đ', img: 'img/hoanghon.jpg',
+      desc: 'Trải nghiệm thể thao nước đầy thú vị trên Hồ Tây lúc xế chiều',
+      details: 'Đón khoảnh khắc hoàng hôn rực rỡ nhất Hà Nội trên mặt nước Hồ Tây. Chèo SUP là cách tuyệt vời để thư giãn và cùng nhau ngắm nhìn thành phố từ một góc độ hoàn toàn mới. Một buổi hẹn năng động và đầy lãng mạn.',
+      includes: ['2 ván chèo SUP cao cấp', 'Đồ bảo hộ & hướng dẫn', 'Gói chụp ảnh chuyên nghiệp', 'Nước uống giải khát'],
+      address: 'Phố Nguyễn Đình Thi, Tây Hồ, Hà Nội'
+    },
+  ]
+};
+
+let purchasedOrders = JSON.parse(localStorage.getItem('heartbeat-orders') || '[]');
+
+
+function renderPartnerSelect() {
+  const $select = document.getElementById('schedule-partner-select');
+  if (!$select) return;
+  
+  const options = profiles.map(p => `<option value="${p.id}">${p.emoji} ${p.name}</option>`).join('');
+  $select.innerHTML = '<option value="">-- Chọn đối tượng hẹn hò --</option>' + options;
+}
+
+function renderCalendar() {
+  renderPartnerSelect();
+  const $grid = document.getElementById('calendar-grid');
+  if (!$grid) return;
+  $grid.innerHTML = '';
+  // Simple mockup calendar for April (starts on Wed)
+  const days = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+  days.forEach(d => {
+    const el = document.createElement('div');
+    el.className = 'cal-day-name';
+    el.textContent = d;
+    $grid.appendChild(el);
+  });
+  
+  for(let i=1; i<=30; i++) {
+    const el = document.createElement('div');
+    el.className = 'cal-date';
+    if (i === 18) el.classList.add('active'); // Today mockup
+    el.textContent = i;
+    el.onclick = () => {
+      $grid.querySelectorAll('.cal-date').forEach(d => d.classList.remove('active'));
+      el.classList.add('active');
+    };
+    $grid.appendChild(el);
+  }
+}
+
+function openComboModal(comboId) {
+  let combo = null;
+  [...datingCombos.eat, ...datingCombos.play].forEach(c => { if(c.id == comboId) combo = c; });
+  if (!combo) return;
+
+  const $modal = document.getElementById('combo-modal');
+  const $body = document.getElementById('combo-modal-body');
+  const $price = document.getElementById('combo-modal-price');
+  const $buyBtn = document.getElementById('combo-modal-buy-btn');
+
+  $body.innerHTML = `
+    <div class="combo-detail-hero">
+      <img src="${combo.img}" alt="${combo.name}">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="combo-detail-content">
+      <div class="header-group">
+        <span class="category-tag">${combo.address.includes('Hà Nội') ? 'Hà Nội' : 'Toàn quốc'}</span>
+        <h1>${combo.name}</h1>
+        <p class="combo-address">📍 ${combo.address}</p>
+      </div>
+      
+      <div class="detail-section">
+        <h3>Giới thiệu</h3>
+        <p>${combo.details}</p>
+      </div>
+      
+      <div class="detail-section">
+        <h3>Gói này bao gồm</h3>
+        <ul class="includes-list">
+          ${combo.includes.map(inc => `<li><span>✓</span> ${inc}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `;
+
+  $price.textContent = combo.price;
+  $buyBtn.onclick = () => {
+    closeComboModal();
+    initiateCheckout(combo.id);
+  };
+
+  $modal.classList.add('active');
+  $modal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeComboModal() {
+  const $modal = document.getElementById('combo-modal');
+  if ($modal) {
+    $modal.classList.remove('active');
+    $modal.classList.add('hidden');
+  }
+  document.body.style.overflow = '';
+}
+
+// ========== CHECKOUT LOGIC ==========
+let selectedComboForCheckout = null;
+
+function initiateCheckout(comboId) {
+  let combo = null;
+  [...datingCombos.eat, ...datingCombos.play].forEach(c => { if(c.id == comboId) combo = c; });
+  if (!combo) return;
+
+  selectedComboForCheckout = combo;
+  switchView('checkout');
+
+  // Populate Summary
+  const $summaryItem = document.getElementById('checkout-order-item');
+  const $subtotal = document.getElementById('summary-subtotal');
+  const $total = document.getElementById('summary-total');
+
+  $summaryItem.innerHTML = `
+    <div class="summary-combo-card">
+      <img src="${combo.img}" alt="${combo.name}">
+      <div class="summary-combo-info">
+        <h4>${combo.name}</h4>
+        <p>${combo.price}</p>
+      </div>
+    </div>
+  `;
+
+  $subtotal.textContent = combo.price;
+  $total.textContent = combo.price;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function setPaymentMethod(method) {
+  const $cardBtn = document.getElementById('pay-card');
+  const $qrBtn = document.getElementById('pay-qr');
+  const $cardUI = document.getElementById('payment-card-ui');
+  const $qrUI = document.getElementById('payment-qr-ui');
+
+  if (method === 'card') {
+    $cardBtn.classList.add('active');
+    $qrBtn.classList.remove('active');
+    $cardUI.classList.remove('hidden');
+    $qrUI.classList.add('hidden');
+  } else {
+    $qrBtn.classList.add('active');
+    $cardBtn.classList.remove('active');
+    $qrUI.classList.remove('hidden');
+    $cardUI.classList.add('hidden');
+  }
+}
+
+function applyPromoCode() {
+  const codeInput = document.getElementById('promo-code');
+  const code = codeInput.value.trim().toUpperCase();
+  const $discountLine = document.getElementById('discount-line');
+  const $discountAmt = document.getElementById('summary-discount');
+  const $total = document.getElementById('summary-total');
+  
+  if (!selectedComboForCheckout) return;
+  
+  // Extract number from price string (e.g., "1,200,000đ" -> 1200000)
+  const basePrice = parseInt(selectedComboForCheckout.price.replace(/\D/g, ''));
+  let discount = 0;
+
+  if (code === 'HEARTBEAT50') {
+    discount = basePrice * 0.5;
+    showToast('🎉 Áp dụng mã thành công! Giảm 50%');
+  } else if (code === 'LOVE20') {
+    discount = basePrice * 0.2;
+    showToast('✨ Áp dụng mã thành công! Giảm 20%');
+  } else {
+    // Check for custom check-in rewards
+    const customVoucher = redeemedVouchers.find(v => v.code === code);
+    if (customVoucher) {
+        discount = customVoucher.value;
+        showToast(`🎁 Áp dụng Voucher thành công! Giảm ${discount.toLocaleString()}đ`);
+    } else {
+        showToast('❌ Mã giảm giá không hợp lệ');
+        return;
+    }
+  }
+
+  const finalPrice = basePrice - discount;
+  
+  $discountAmt.textContent = `-${discount.toLocaleString()}đ`;
+  $discountLine.classList.remove('hidden');
+  $total.textContent = `${finalPrice.toLocaleString()}đ`;
+  
+  // Disable input/button after success
+  codeInput.disabled = true;
+  document.querySelector('.apply-btn').disabled = true;
+}
+
+function processPayment() {
+  const $btn = document.getElementById('btn-final-pay');
+  const originalText = $btn.innerHTML;
+
+  $btn.disabled = true;
+  $btn.innerHTML = `<div class="loading-spinner"></div> Đang kiểm tra...`;
+
+  setTimeout(() => {
+    // Save order logic
+    if (selectedComboForCheckout) {
+      const newOrder = {
+        ...selectedComboForCheckout,
+        orderId: 'HB' + Math.floor(Math.random() * 900000 + 100000),
+        date: new Date().toLocaleDateString('vi-VN'),
+        status: 'Đã thanh toán'
+      };
+      purchasedOrders.unshift(newOrder);
+      localStorage.setItem('heartbeat-orders', JSON.stringify(purchasedOrders));
+    }
+
+    $btn.innerHTML = `✅ Thành công!`;
+    showToast('✨ Thanh toán thành công! Đơn hàng của bạn đã được ghi lại.');
+    
+    setTimeout(() => {
+      switchView('cart');
+      // Switch tab to history
+      document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+      const $historyBtn = document.querySelector('.pill-btn[data-cat="history"]');
+      if ($historyBtn) $historyBtn.classList.add('active');
+      renderCart('history');
+      
+      $btn.disabled = false;
+      $btn.innerHTML = originalText;
+      selectedComboForCheckout = null;
+    }, 1500);
+  }, 2000);
+}
+
+function renderCart(category = 'eat') {
+  const $grid = document.getElementById('cart-items-grid');
+  const $historyGrid = document.getElementById('order-history-grid');
+  if (!$grid || !$historyGrid) return;
+
+  if (category === 'history') {
+    $grid.classList.add('hidden');
+    $historyGrid.classList.remove('hidden');
+    renderOrderHistory();
+    return;
+  }
+
+  $grid.classList.remove('hidden');
+  $historyGrid.classList.add('hidden');
+  $grid.innerHTML = '';
+  
+  const items = datingCombos[category] || [];
+  items.forEach(item => {
+    const $card = document.createElement('div');
+    $card.className = 'combo-card';
+    $card.onclick = () => openComboModal(item.id);
+    $card.innerHTML = `
+      <div class="combo-img-container">
+        <img src="${item.img}" alt="${item.name}">
+      </div>
+      <div class="combo-info">
+        <h3>${item.name}</h3>
+        <p>${item.desc}</p>
+        <div class="combo-footer">
+          <span class="price">${item.price}</span>
+          <button class="btn-buy-now">Mua ngay</button>
+        </div>
+      </div>
+    `;
+    $card.querySelector('.btn-buy-now').onclick = (e) => {
+      e.stopPropagation();
+      initiateCheckout(item.id);
+    };
+    $grid.appendChild($card);
+  });
+}
+
+function renderOrderHistory() {
+  const $el = document.getElementById('order-history-grid');
+  if (!$el) return;
+  
+  if (purchasedOrders.length === 0) {
+    $el.innerHTML = `
+      <div style="text-align:center; padding: 80px 20px; color: var(--text-muted);">
+        <div style="font-size: 3.5rem; margin-bottom: 24px;">📜</div>
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">Bạn chưa có đơn hàng nào</h3>
+        <p style="margin-top: 8px;">Hãy bắt đầu buổi hẹn hò mơ ước bằng cách chọn một gói combo!</p>
+      </div>
+    `;
+    return;
+  }
+
+  $el.innerHTML = purchasedOrders.map(order => `
+    <div class="order-item-card">
+      <img src="${order.img}" class="order-thumb" alt="${order.name}">
+      <div class="order-details">
+        <h4>${order.name}</h4>
+        <div class="order-meta">
+          <span>Mã đơn hàng: ${order.orderId}</span>
+          <span><i class="fa-regular fa-calendar"></i> ${order.date}</span>
+        </div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-weight: 850; font-size: 1.2rem; color: var(--text-primary); margin-bottom: 8px;">${order.price}</div>
+        <span class="status-badge paid">Đã thanh toán</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+document.querySelectorAll('.pill-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderCart(btn.dataset.cat);
+  };
+});
+
+
+// Removed duplicate nav-btn listeners to prevent conflict.
+// All navigation is now handled by the consolidated listener above.
+
+// ========== DAILY CHECK-IN LOGIC (MONTHLY XU ECONOMY) ==========
+let userCoins = 1200; // Starting some coins for testing
+let claimedDays = [1, 2, 5]; // Days already claimed this month
+let claimedToday = false;
+let redeemedVouchers = [];
+
+const voucherData = [
+  { id: 'v1', name: 'Voucher Đồng', desc: 'Giảm 20.000đ cho mọi đơn hàng', cost: 1000, value: 20000 },
+  { id: 'v2', name: 'Voucher Bạc', desc: 'Giảm 100.000đ cho đơn từ 500k', cost: 5000, value: 100000 },
+  { id: 'v3', name: 'Voucher Vàng', desc: 'Giảm 250.000đ cho đơn từ 1tr', cost: 10000, value: 250000 }
+];
+
+function renderCheckinGrid() {
+  const $grid = document.getElementById('streak-grid');
+  if (!$grid) return;
+  $grid.innerHTML = '';
+
+  for (let i = 1; i <= 30; i++) {
+      const day = document.createElement('div');
+      const isClaimed = claimedDays.includes(i);
+      const isToday = i === 6 && !claimedToday; // Mocking today as day 6
+      
+      day.className = `streak-day ${isClaimed ? 'claimed' : ''} ${isToday ? 'active' : ''}`;
+      day.innerHTML = `
+          <div class="day-num">${i}</div>
+          <div class="day-coin">
+            <i class="${isClaimed ? 'fa-solid fa-circle-check' : 'fa-solid fa-coins'}" style="${isClaimed ? '' : 'color:#FFD60A'}"></i>
+          </div>
+      `;
+      $grid.appendChild(day);
+  }
+  
+  const $coinsVal = document.getElementById('user-coins');
+  if ($coinsVal) $coinsVal.textContent = userCoins.toLocaleString();
+  
+  const $claimBtn = document.getElementById('btn-claim-today');
+  const $successMsg = document.getElementById('checkin-completed-msg');
+  if ($claimBtn && $successMsg) {
+      if (claimedToday) {
+          $claimBtn.classList.add('hidden');
+          $successMsg.classList.remove('hidden');
+      } else {
+          $claimBtn.classList.remove('hidden');
+          $successMsg.classList.add('hidden');
+      }
+  }
+  renderVoucherStore();
+}
+
+function renderVoucherStore() {
+  const $list = document.getElementById('voucher-list');
+  if (!$list) return;
+  $list.innerHTML = '';
+
+  voucherData.forEach(v => {
+      const item = document.createElement('div');
+      item.className = 'voucher-item';
+      const canAfford = userCoins >= v.cost;
+      
+      item.innerHTML = `
+          <div class="voucher-info">
+              <h4>${v.name}</h4>
+              <p>${v.desc}</p>
+              <div class="voucher-cost">Giá: ${v.cost.toLocaleString()} Xu</div>
+          </div>
+          <button class="btn-redeem" ${canAfford ? '' : 'disabled'} onclick="redeemVoucher('${v.id}')">
+              Đổi ngay
+          </button>
+      `;
+      $list.appendChild(item);
+  });
+}
+
+window.redeemVoucher = function(vId) {
+  const v = voucherData.find(x => x.id === vId);
+  if (!v || userCoins < v.cost) return;
+
+  const newCode = 'REWARD' + Math.floor(1000 + Math.random() * 9000);
+  redeemedVouchers.push({ code: newCode, value: v.value });
+  userCoins -= v.cost;
+  
+  showToast(`🎁 Đổi quà thành công! Mã ${v.name}: ${newCode}`);
+  renderCheckinGrid();
+  navigator.clipboard.writeText(newCode);
+};
+
+document.getElementById('btn-claim-today')?.addEventListener('click', () => {
+  if (claimedToday) return;
+  
+  const reward = Math.floor(Math.random() * (500 - 200 + 1)) + 200;
+  userCoins += reward;
+  claimedDays.push(6); // Claim day 6
+  claimedToday = true;
+  
+  showToast(`✨ Chúc mừng! Bạn nhận được ${reward} Xu.`);
+  renderCheckinGrid();
+});
+
+// ========== SOCIAL FEED DATA ==========
+const socialData = [
+  { id: 101, author: "Nguyễn Minh Tú", handle: "@minhtu.dev", avatar: "MT", content: "Hôm nay thời tiết Hà Nội thật đẹp, rất thích hợp để dạo phố và thưởng thức một ly cafe trứng. ☕️🌥️", likes: 25, replies: 3, time: "1h" },
+  { id: 102, author: "Nguyễn Minh Tú", handle: "@minhtu.dev", avatar: "MT", content: "Vừa đổi được voucher Apple Music từ điểm tích lũy của Heartbeat. Quá hời! 🎵✨ #apple #heartbeat", likes: 42, replies: 8, time: "1d" },
+  { id: 1, author: "Linh Đan", handle: "@linhdan.travel", avatar: "LD", content: "Vừa trải nghiệm buổi workshop làm gốm từ Combo của Heartbeat. Thực sự rất thư giãn và ý nghĩa! 🍶✨ #dating #pottery", image: "img/lamgom.jpg", likes: 124, replies: 12, time: "2h" },
+  { id: 2, author: "Hoàng Minh", handle: "@minh.hoang", avatar: "HM", content: "Có ai biết quán cafe nào chill chill ở mạn Tây Hồ không nhỉ? Đang muốn rủ crush đi date cuối tuần này. ☕️", likes: 45, replies: 28, time: "5h", thread: [{ author: "Phương Anh", handle: "@phanh.heart", avatar: "PA", content: "Bạn thử qua 'Nắng Cafe' xem, view hồ cực đỉnh luôn đấy!", likes: 5, time: "4h" }] },
+  { id: 3, author: "Heartbeat Official", handle: "@heartbeat.app", avatar: "❤️", content: "Chúc mừng cặp đôi thứ 1000 đã kết nối thành công qua ứng dụng trong tháng này! Love is in the air. 🎈🥰", image: "img/finedining.jpg", likes: 890, replies: 56, time: "1d" },
+  { id: 4, author: "Tuấn Anh", handle: "@tuananh.dev", avatar: "TA", content: "Lần đầu đi date mà trời mưa như trút nước, may mà book được cái Combo Cinema riêng tư. Cứu cánh thực sự! 🍿🎬", image: "img/rapphim2.jpg", likes: 210, replies: 15, time: "6h" },
+  { id: 5, author: "Minh Thư", handle: "@mthu.bee", avatar: "MT", content: "Đố mọi người chủ đề nào dễ bắt chuyện nhất khi match lần đầu? Mình toàn bị bí từ... 😅", likes: 32, replies: 89, time: "8h" },
+  { id: 6, author: "Quốc Bảo", handle: "@bao.strong", avatar: "QB", content: "Phở gánh Hàng Chiếu lúc 3h sáng với crush, tại sao không? Một trải nghiệm cực kỳ Hà Nội. 🍜🏮", image: "img/pho_1.jpg", likes: 156, replies: 22, time: "10h" },
+  { id: 7, author: "Lan Hương", handle: "@huong.lan", avatar: "LH", content: "Mùa này đi SUP ngắm hoàng hôn ở Hồ Tây là nhất. Vừa lãng mạn vừa có ảnh đẹp mang về. 🛶🌅", image: "img/cheosup.jpg", likes: 342, replies: 18, time: "12h" },
+  { id: 8, author: "Đức Huy", handle: "@huy.duc", avatar: "DH", content: "Mọi người nghĩ sao về việc chia sẻ hóa đơn trong buổi hẹn đầu tiên? 💸🤔", likes: 67, replies: 145, time: "15h" },
+  { id: 9, author: "Thanh Hằng", handle: "@thanhhang.official", avatar: "TH", content: "Một buổi sáng bình yên với cafe và một cuốn sách hay. Đang chờ đợi một nửa có cùng sở thích. 📖☕️", image: "img/cafe_1.jpg", likes: 278, replies: 14, time: "18h" },
+  { id: 10, author: "Gia Bách", handle: "@bach.gia", avatar: "GB", content: "Vừa match được một bạn nữ siêu hợp gu âm nhạc. Cảm ơn Heartbeat nhé! 🎸🎧", likes: 189, replies: 9, time: "21h" },
+  { id: 11, author: "Mai Linh", handle: "@mailinh.99", avatar: "ML", content: "Hẹn hò ở workshop làm gốm là một ý tưởng không tồi đâu mọi người ạ. Tay trong tay nhào nặn siêu vui. 🏺💖", image: "img/lamgom_1.jpg", likes: 412, replies: 31, time: "1d" },
+  { id: 12, author: "Hữu Phước", handle: "@phuoc.huu", avatar: "HP", content: "Nghe nói ai match được mình đều gặp may mắn cả năm đấy. Tin không? 😉✨", likes: 88, replies: 42, time: "1d" },
+  { id: 13, author: "Ngọc Ánh", handle: "@anh.ngoc", avatar: "NA", content: "Thích cảm giác lang thang phố xá và ăn đồ ăn lề đường hơn là vào nhà hàng sang trọng. Có ai giống mình không? 🍡🍢", image: "img/xienban.jpg", likes: 523, replies: 67, time: "2d" },
+  { id: 14, author: "Trọng Nghĩa", handle: "@nghia.trong", avatar: "TN", content: "Chiều nay Hồ Tây đẹp quá, ước gì có ai đó cùng ngồi đây ngắm hoàng hôn. 🌅☁️", likes: 145, replies: 21, time: "2d" },
+  { id: 15, author: "Bích Phương", handle: "@phuong.bich", avatar: "BP", content: "Hãy là chính mình trong mọi buổi hẹn. Đừng cố tỏ ra hoàn hảo. Chân thành luôn là chìa khóa. ❤️🗝️", likes: 780, replies: 45, time: "2d" },
+  { id: 16, author: "Việt Dũng", handle: "@dung.viet", avatar: "VD", content: "Tìm đồng đội đi chèo SUP cuối tuần này tại Hồ Tây. Ai đi không? 🚣‍♂️💦", image: "img/cheosup_2.jpg", likes: 92, replies: 38, time: "3d" },
+  { id: 17, author: "Kim Chi", handle: "@chi.kim", avatar: "KC", content: "Bữa tối lãng mạn dưới ánh nến. Một kỷ niệm khó quên. 🕯️🥂", image: "img/finedining.jpg", likes: 612, replies: 28, time: "3d" },
+  { id: 18, author: "Minh Quân", handle: "@quan.minh", avatar: "MQ", content: "Có ai rảnh tối nay không? Mình có 2 vé xem phim mà bạn thân hủy kèo phút chót. 🎟️🍿", likes: 56, replies: 72, time: "3d" },
+  { id: 19, author: "Thùy Trang", handle: "@trang.thuy", avatar: "TT", content: "Cafe và chill. Cuối tuần nhẹ nhàng. 🌿☕", image: "img/cafe_2.jpg", likes: 312, replies: 19, time: "4d" },
+  { id: 20, author: "Hoàng Long", handle: "@long.hoang", avatar: "HL", content: "Vừa tham gia workshop làm gốm, sản phẩm hơi 'méo' một tí nhưng kỷ niệm thì rất tròn. 😂🍯", image: "img/lamgom_3.jpg", likes: 198, replies: 24, time: "4d" },
+  { id: 21, author: "Diệu Thúy", handle: "@thuy.dieu", avatar: "DT", content: "Tình yêu không phải là tìm kiếm người hoàn hảo, mà là học cách nhìn thấy những điều hoàn hảo từ một người không hoàn hảo. ✨", likes: 1200, replies: 110, time: "4d" },
+  { id: 22, author: "Quang Hải", handle: "@hai.quang", avatar: "QH", content: "Đồ ăn đường phố Hà Nội đúng là cực phẩm. Ăn mãi không chán! 🥟🌶️", image: "img/strettfood_3.jpg", likes: 421, replies: 53, time: "5d" },
+  { id: 23, author: "Tuyết Mai", handle: "@mai.tuyet", avatar: "TM", content: "Chờ đợi một người đủ kiên nhẫn để nghe mình kể những chuyện không đầu không cuối. 🌙💭", likes: 89, replies: 34, time: "5d" },
+  { id: 24, author: "Khánh Nam", handle: "@nam.khanh", avatar: "KN", content: "Rạp chiếu phim riêng tư là chân ái cho mấy cặp đôi cần không gian riêng. Book ngay trên Heartbeat nhé! 📽️💖", image: "img/râpphim3.jpg", likes: 532, replies: 41, time: "5d" },
+  { id: 25, author: "Yến Nhi", handle: "@nhi.yen", avatar: "YN", content: "Yêu bản thân trước khi yêu người khác. Bạn xứng đáng được trân trọng. 👑💖", likes: 945, replies: 56, time: "6d" },
+  { id: 26, author: "Bảo Lâm", handle: "@lam.bao", avatar: "BL", content: "Chiều hoàng hôn buông không còn cô đơn vì đã có Heartbeat. 🌅🤝", likes: 167, replies: 12, time: "6d" },
+  { id: 27, author: "Hồng Nhung", handle: "@nhung.hong", avatar: "HN", content: "Một bữa tối thật ngon và không gian thật đẹp. Cảm ơn vì tất cả. 🍷✨", image: "img/finedining_2.jpg", likes: 732, replies: 32, time: "1w" },
+  { id: 28, author: "Thành Đạt", handle: "@dat.thanh", avatar: "TD", content: "Hà Nội mùa này đẹp lắm, dắt tay nhau đi dạo thì còn gì bằng. 🍂🧣", likes: 234, replies: 28, time: "1w" },
+  { id: 29, author: "Cẩm Tú", handle: "@tu.cam", avatar: "CT", content: "Làm gốm mệt nhưng mà vui. Thành quả đầu tay đây mọi người ơi! 🎨🍶", image: "img/gom_3.jpg", likes: 489, replies: 44, time: "1w" },
+  { id: 30, author: "Minh Triết", handle: "@triet.minh", avatar: "MT", content: "Ai cũng xứng đáng có một người khiến họ cảm thấy mình là điều quan trọng nhất. ❤️", likes: 1560, replies: 98, time: "1w" },
+  { id: 31, author: "Kiều Anh", handle: "@anh.kieu", avatar: "KA", content: "Mùi cafe sáng sớm luôn khiến mình cảm thấy tràn đầy năng lượng. ☕️⚡", image: "img/25a7822be1f0509009c71cf382dbdc68.jpg", likes: 312, replies: 15, time: "1w" },
+  { id: 32, author: "Anh Tuấn", handle: "@tuan.anh", avatar: "AT", content: "Vừa hoàn thành buổi SUP sunset. Phê chữ ê kéo dài! 🛶🔥", image: "img/sup_sunset.png", likes: 456, replies: 37, time: "2w" },
+  { id: 33, author: "Thu Hà", handle: "@ha.thu", avatar: "TH", content: "Hạnh phúc đôi khi chỉ là cùng nhau ăn một bát phở nóng giữa đêm lạnh. 🍜❄️", image: "img/6bcb5287c3e201ab6ac50bb00d151337.jpg", likes: 678, replies: 82, time: "2w" },
+  { id: 34, author: "Mạnh Hùng", handle: "@hung.manh", avatar: "MH", content: "Đừng bao giờ từ bỏ hy vọng tìm thấy tình yêu chân thành. Nó vẫn ở đâu đó thôi. ✨❤️", likes: 890, replies: 41, time: "2w" },
+  { id: 35, author: "Linh Chi", handle: "@chi.linh", avatar: "LC", content: "Phim hay, bỏng ngô ngon và một người đồng hành tuyệt vời. 🎞️👩‍❤️‍👨", image: "img/065864f3373070e9390768001d2be60f.jpg", likes: 521, replies: 26, time: "2w" },
+  { id: 36, author: "Gia Huy", handle: "@huy.gia", avatar: "GH", content: "Tối nay ăn gì nhỉ? Đang phân vân giữa lẩu và nướng... 🥘🍢", likes: 76, replies: 112, time: "3w" },
+  { id: 37, author: "Ngọc Mai", handle: "@mai.ngoc", avatar: "NM", content: "Vẻ đẹp của một người nằm ở tâm hồn của họ. Hãy nhìn sâu vào bên trong. 💎💖", likes: 1340, replies: 76, time: "3w" },
+  { id: 38, author: "Đăng Khoa", handle: "@khoa.dang", avatar: "DK", content: "Hoàng hôn Hồ Tây không bao giờ làm mình thất vọng. Đẹp rụng rời! 🌅✨", image: "img/ad741029f20fb5cb82cb40ecb817d488.jpg", likes: 389, replies: 24, time: "3w" },
+  { id: 39, author: "Hương Giang", handle: "@giang.huong", avatar: "HG", content: "Một ngày làm gốm thật năng suất. Rất recommend mọi người thử nhé! 🍶👋", image: "img/2718621ee9ec09427396eb26de185027.jpg", likes: 267, replies: 19, time: "4w" },
+  { id: 40, author: "Quang Vinh", handle: "@vinh.quang", avatar: "QV", content: "Cảm ơn Heartbeat đã giúp mình tìm thấy người định mệnh. Chúng mình vừa đính hôn rồi! 💍😭❤️", image: "img/finedining.jpg", likes: 5600, replies: 432, time: "1m" }
+];
+
+function renderFeed() {
+  const $list = document.getElementById('feed-list');
+  if (!$list) return;
+  $list.innerHTML = '';
+
+  socialData.forEach(post => {
+    const $post = document.createElement('div');
+    $post.className = 'feed-post';
+    
+    let threadHtml = '';
+    if (post.thread) {
+      post.thread.forEach(reply => {
+        threadHtml += `
+          <div class="feed-reply">
+            <div class="post-aside">
+              <div class="avatar-sm">${reply.avatar}</div>
+            </div>
+            <div class="post-main">
+              <div class="post-header">
+                <span class="author">${reply.author}</span>
+                <span class="time">${reply.time}</span>
+              </div>
+              <div class="post-content">${reply.content}</div>
+              <div class="post-actions">
+                <span class="action-item"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    $post.innerHTML = `
+      <div class="post-aside">
+        <div class="avatar-main ${post.author === 'Nguyễn Minh Tú' ? 'avatar-me' : ''}">${post.author === 'Nguyễn Minh Tú' ? '' : post.avatar}</div>
+        ${post.thread ? '<div class="thread-line"></div>' : ''}
+      </div>
+      <div class="post-main">
+        <div class="post-header">
+          <span class="author">${post.author}</span>
+          <span class="handle">${post.handle}</span>
+          <span class="time">• ${post.time}</span>
+        </div>
+        <div class="post-content">${post.content}</div>
+        ${post.image ? `<div class="post-image-container"><img src="${post.image}" alt="Post Image"></div>` : ''}
+        <div class="post-actions">
+          <div class="action-item" onclick="this.classList.toggle('active')">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>${post.likes}</span>
+          </div>
+          <div class="action-item">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>${post.replies}</span>
+          </div>
+          <div class="action-item">
+            <!-- Font Awesome Repost -->
+            <i class="fa-solid fa-arrows-rotate" style="font-size: 15px; opacity: 0.7;"></i>
+          </div>
+          <div class="action-item">
+            <!-- Font Awesome Share (45deg Rotation) -->
+            <i class="fa-regular fa-paper-plane" style="font-size: 15px; opacity: 0.7; transform: rotate(45deg);"></i>
+          </div>
+        </div>
+        ${threadHtml}
+      </div>
+    `;
+    $list.appendChild($post);
+  });
+}
+
+function renderMyPosts() {
+  const $list = document.getElementById('my-posts-list');
+  if (!$list) return;
+  $list.innerHTML = '';
+
+  const myPosts = socialData.filter(p => p.author === "Nguyễn Minh Tú");
+  
+  if (myPosts.length === 0) {
+    $list.innerHTML = '<div class="no-posts">Bạn chưa có bài viết nào.</div>';
+    return;
+  }
+
+  myPosts.forEach(post => {
+    const $post = document.createElement('div');
+    $post.className = 'feed-post';
+    $post.innerHTML = `
+      <div class="post-aside">
+        <div class="avatar-main avatar-me"></div>
+      </div>
+      <div class="post-main">
+        <div class="post-header">
+          <span class="author">${post.author}</span>
+          <span class="handle">${post.handle}</span>
+          <span class="time">• ${post.time}</span>
+        </div>
+        <div class="post-content">${post.content}</div>
+        <div class="post-actions">
+          <div class="action-item"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>${post.likes}</span></div>
+          <div class="action-item"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>${post.replies}</span></div>
+        </div>
+      </div>
+    `;
+    $list.appendChild($post);
+  });
+}
+
+document.querySelectorAll('.time-slot').forEach(slot => {
+  slot.addEventListener('click', () => {
+    document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active'));
+    slot.classList.add('active');
+  });
+});
+
+document.querySelector('.confirm-btn')?.addEventListener('click', () => {
+  const partnerId = document.getElementById('schedule-partner-select').value;
+  if (!partnerId) {
+    showToast('⚠️ Vui lòng chọn đối tượng trước khi lên lịch!');
+    return;
+  }
+  const partner = profiles.find(p => p.id == partnerId);
+  showToast(`🚀 Đã xác nhận lịch hẹn với ${partner.name} thành công!`);
+});
+
+// =====================================================
+//  SCROLL INTERACTIONS
+// =====================================================
+let lastScrollTop = 0;
+const $backToTop = document.getElementById('back-to-top');
+
+function setupScrollInteractions() {
+  document.querySelectorAll('.view').forEach(view => {
+    // Store scroll state per view instance
+    view.lastScrollTop = 0;
+    
+    view.addEventListener('scroll', () => {
+      const scrollTop = view.scrollTop;
+      
+      // 1. Back to top visibility (Threshold 300px)
+      if ($backToTop) {
+        $backToTop.classList.toggle('visible', scrollTop > 300);
+      }
+
+      // 2. Smart header logic
+      const header = view.querySelector('.swipe-header.mobile-only');
+      if (header) {
+        // ALWAYS show at top
+        if (scrollTop < 50) {
+          header.classList.remove('header-hidden');
+        } 
+        // Hide on scroll down, Show on scroll up
+        else if (scrollTop > view.lastScrollTop && scrollTop > 100) {
+          header.classList.add('header-hidden');
+        } 
+        else if (scrollTop < view.lastScrollTop) {
+          header.classList.remove('header-hidden');
+        }
+      }
+      
+      view.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, { passive: true });
+  });
+
+  // Handle click for back to top
+  if ($backToTop) {
+    $backToTop.addEventListener('click', () => {
+      const activeView = document.querySelector('.view.active');
+      if (activeView) {
+        activeView.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+}
+
+// =====================================================
 //  INIT
 // =====================================================
 function init() {
-  renderCards();
-  renderMatchesGrid();
-  renderHeatMap();
-  renderChatList('private');
-  renderChatList('group');
-  renderAdminDashboard();
+  try {
+    console.log('Heartbeat initializing...');
+    setupNavigation();
+    
+    // Start on Login view
+    switchView('login');
+    // Initial renders
+    renderCards();
+    renderFeed();
+    renderCheckinGrid();
+    renderMatchesGrid();
+    renderHeatMap();
+    renderChatList('private');
+    renderChatList('group');
+    renderAdminDashboard();
+    renderCalendar();
+    renderCart('eat');
+    renderMyPosts();
+
+    // Scroll helpers
+    setupScrollInteractions();
+  } catch (err) {
+    console.error('Initialization failed:', err);
+  }
 }
 
 init();
