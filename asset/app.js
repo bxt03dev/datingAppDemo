@@ -273,8 +273,8 @@ const profiles = [
 const privateChats = [
   {
     id: 'c1',
-    name: 'Linh 🌸',
-    emoji: '🌸',
+    name: 'Linh',
+    emoji: '',
     gradient: 'linear-gradient(135deg, #f093fb, #f5576c)',
     photo: 'img/linh_1.jpg',
     online: true,
@@ -295,8 +295,8 @@ const privateChats = [
   },
   {
     id: 'c2',
-    name: 'Hà 🌺',
-    emoji: '🌺',
+    name: 'Hà',
+    emoji: '',
     gradient: 'linear-gradient(135deg, #43e97b, #38f9d7)',
     photo: 'img/ha_1.jpg',
     online: true,
@@ -316,8 +316,8 @@ const privateChats = [
   },
   {
     id: 'c3',
-    name: 'Mai 🌻',
-    emoji: '🌻',
+    name: 'Mai',
+    emoji: '',
     gradient: 'linear-gradient(135deg, #fddb92, #d1fdff)',
     photo: 'img/mai_1.jpg',
     online: false,
@@ -335,8 +335,8 @@ const privateChats = [
   },
   {
     id: 'c4',
-    name: 'Trang 💎',
-    emoji: '💎',
+    name: 'Trang',
+    emoji: '',
     gradient: 'linear-gradient(135deg, #f7971e, #ffd200)',
     photo: 'img/trang_1.jpg',
     online: true,
@@ -353,8 +353,8 @@ const privateChats = [
   },
   {
     id: 'c5',
-    name: 'An 🦋',
-    emoji: '🦋',
+    name: 'An',
+    emoji: '',
     gradient: 'linear-gradient(135deg, #fa709a, #fee140)',
     photo: 'img/an_1.jpg',
     online: false,
@@ -1948,8 +1948,11 @@ function processPayment() {
   setTimeout(() => {
     // Save order logic
     if (selectedComboForCheckout) {
+      const finalPrice = document.getElementById('summary-total')?.textContent || selectedComboForCheckout.price;
+      
       const newOrder = {
         ...selectedComboForCheckout,
+        price: finalPrice, // Use the actual paid total (with discount if any)
         orderId: 'HB' + Math.floor(Math.random() * 900000 + 100000),
         date: new Date().toLocaleDateString('vi-VN'),
         status: 'Đã thanh toán'
@@ -1958,7 +1961,7 @@ function processPayment() {
       localStorage.setItem('heartbeat-orders', JSON.stringify(purchasedOrders));
     }
 
-    $btn.innerHTML = `✅ Thành công!`;
+    $btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> Thành công!`;
     showToast('✨ Thanh toán thành công! Đơn hàng của bạn đã được ghi lại.');
     
     setTimeout(() => {

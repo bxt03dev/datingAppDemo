@@ -149,10 +149,7 @@
         </button>
         <h1 class="header-title">Khám phá</h1>
         <div class="header-actions">
-          <button class="filter-btn" id="btn-filter">
-            <svg viewBox="0 0 24 24"><path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"/></svg>
-            Bộ lọc
-          </button>
+
         </div>
       </header>
 
@@ -456,15 +453,15 @@
           
           <div class="cart-nav-pills">
             <button class="pill-btn active" data-cat="eat">
-              <span class="pill-icon">🍴</span>
+              <span class="pill-icon"><i class="fa-solid fa-plate-wheat"></i></span>
               <span>Đi ăn</span>
             </button>
             <button class="pill-btn" data-cat="play">
-              <span class="pill-icon">🎢</span>
+              <span class="pill-icon"><i class="fa-solid fa-gamepad"></i></span>
               <span>Đi chơi</span>
             </button>
             <button class="pill-btn" data-cat="history">
-              <span class="pill-icon">📜</span>
+              <span class="pill-icon"><i class="fa-solid fa-list-check"></i></span>
               <span>Đơn đã đặt</span>
             </button>
           </div>
@@ -875,15 +872,13 @@
 
     <!-- ========== VIEW: MY PROFILE ========== -->
     <section id="view-profile" class="view">
-      <div class="swipe-header mobile-only">
-        <button class="icon-btn" onclick="openSidebar()" title="Menu">
+      <header class="unified-mobile-header">
+        <button class="icon-btn sidebar-toggle" title="Menu">
           <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </button>
-        <h1 class="swipe-title">Hồ sơ</h1>
-        <button class="icon-btn" onclick="switchView('profile')">
-          <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/></svg>
-        </button>
-      </div>
+        <h1 class="header-title">Hồ sơ</h1>
+        <div class="header-actions"></div>
+      </header>
 
       <div class="my-profile-page">
         <div class="profile-hero-section">
@@ -981,12 +976,13 @@
 
     <!-- ========== VIEW: ADMIN (BROKER) ========== -->
     <section id="view-admin" class="view">
-      <div class="mobile-header mobile-only">
+      <header class="unified-mobile-header">
         <button class="icon-btn sidebar-toggle" title="Menu">
           <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </button>
-        <h1 class="swipe-title">Quản trị</h1>
-      </div>
+        <h1 class="header-title">Quản trị</h1>
+        <div class="header-actions"></div>
+      </header>
 
       <div class="admin-dashboard">
         <div class="section-header">
@@ -1090,7 +1086,7 @@
   <!-- ========== MODAL: PROFILE DETAIL ========== -->
   <div id="profile-modal" class="modal-overlay hidden">
     <div class="modal-content profile-modal-content">
-      <button class="modal-close" id="btn-close-profile">✕</button>
+      <button class="modal-close" id="btn-close-profile"><i class="fa-solid fa-circle-xmark"></i></button>
       <div id="profile-photos" class="profile-photos"></div>
       <div class="profile-detail-info">
         <div class="profile-detail-header">
@@ -1151,7 +1147,7 @@
   <div id="combo-modal" class="modal-overlay hidden">
     <div class="combo-modal-content">
       <button class="modal-close" onclick="closeComboModal()">
-        <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        <i class="fa-solid fa-circle-xmark"></i>
       </button>
       <div id="combo-modal-body" class="combo-modal-body">
         <!-- JS Populated -->
