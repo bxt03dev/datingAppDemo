@@ -633,7 +633,10 @@ function switchView(viewId) {
     if ($mobileBottomNav) $mobileBottomNav.classList.add('hidden');
     // Also hide sidebar for login view if open
     $sidebar?.classList.remove('open');
-  } else if (!isLoggedIn && viewId !== 'login') {
+    document.getElementById('chatbot-launcher')?.classList.add('hidden');
+  } else {
+    document.getElementById('chatbot-launcher')?.classList.remove('hidden');
+  } if (!isLoggedIn && viewId !== 'login') {
     // Prevent unauthorized access in demo if needed, 
     // but for this task we'll just allow it after the login mock.
   }
@@ -1327,6 +1330,10 @@ function openChat(conv, type) {
   // Show window
   $chatWindow.classList.remove('hidden');
   $chatWindow.classList.add('chat-open');
+
+  // Hide chatbot icon when conversation is open
+  document.getElementById('chatbot-launcher')?.classList.add('hidden');
+  document.getElementById('chatbot-window')?.classList.add('hidden');
 }
 
 function renderMessages(messages, isGroup) {
@@ -1444,6 +1451,8 @@ document.getElementById('btn-back-chat').addEventListener('click', () => {
   if ($mobileBottomNav && window.innerWidth <= 660) {
     $mobileBottomNav.classList.remove('hidden');
   }
+  // Restore chatbot icon
+  document.getElementById('chatbot-launcher')?.classList.remove('hidden');
 });
 
 // Chat tabs
@@ -1747,6 +1756,13 @@ const datingCombos = {
       details: 'Đón khoảnh khắc hoàng hôn rực rỡ nhất Hà Nội trên mặt nước Hồ Tây. Chèo SUP là cách tuyệt vời để thư giãn và cùng nhau ngắm nhìn thành phố từ một góc độ hoàn toàn mới. Một buổi hẹn năng động và đầy lãng mạn.',
       includes: ['2 ván chèo SUP cao cấp', 'Đồ bảo hộ & hướng dẫn', 'Gói chụp ảnh chuyên nghiệp', 'Nước uống giải khát'],
       address: 'Phố Nguyễn Đình Thi, Tây Hồ, Hà Nội'
+    },
+    { 
+      id: 7, name: 'Tarot reading for couples', price: '40,000đ', img: 'img/5be41eefe6b87998f7d84b248727d4ca.jpg',
+      desc: 'Khám phá sự kết nối tâm linh qua những lá bài Tarot huyền bí',
+      details: 'Một buổi xem Tarot riêng tư dành cho hai bạn để thấu hiểu hơn về mối quan hệ, những tiềm năng và lời khuyên từ những lá bài. Chuyên gia Tarot sẽ giúp bạn giải mã những thắc mắc và định hướng cho tương lai của cả hai trong một không gian yên tĩnh và ấm cúng.',
+      includes: ['60 phút xem Tarot chuyên sâu', 'Phân tích bản đồ sao cơ bản', 'Đồ uống nhẹ miễn phí', 'Không gian xem riêng tư'],
+      address: 'Quận Hoàn Kiếm / Quận Tây Hồ, Hà Nội'
     },
   ]
 };
@@ -2386,10 +2402,96 @@ function setupScrollInteractions() {
 // =====================================================
 //  INIT
 // =====================================================
+
+// =====================================================
+//  CHATBOT LOGIC
+// =====================================================
+function initChatbot() {
+  const $launcher = document.getElementById('chatbot-launcher');
+  const $window = document.getElementById('chatbot-window');
+  const $close = document.getElementById('btn-close-chatbot');
+  const $input = document.getElementById('chatbot-input');
+  const $send = document.getElementById('btn-send-chatbot');
+  const $messages = document.getElementById('chatbot-messages');
+
+  if (!$launcher || !$window) return;
+
+  const botResponses = [
+    "Chào bạn! Tôi có thể giúp gì cho bạn hôm nay? 😊",
+    "Heartbeat là ứng dụng hẹn hò chính xác nhất hiện nay. Bạn đã thử tính năng Heatmap chưa?",
+    "Để có thêm nhiều lượt match, hãy đảm bảo hồ sơ của bạn có ít nhất 3 ảnh đẹp nhé!",
+    "Bạn muốn tìm hiểu thêm về gói Premium của chúng tôi không?",
+    "Hôm nay có rất nhiều sự kiện ghép đôi thú vị đang diễn ra đấy!",
+    "Chúc bạn một ngày tốt lành và sớm tìm được một nửa của mình! ✨",
+    "Nếu gặp vấn đề gì về thanh toán, hãy liên hệ với đội ngũ hỗ trợ qua email nhé."
+  ];
+
+  function addMessage(text, isBot = false) {
+    if (isBot) {
+      const group = document.createElement('div');
+      group.className = 'bot-msg-group';
+      group.innerHTML = `
+        <div class="bot-avatar"><i class="fa-brands fa-discord"></i></div>
+        <div class="bot-msg-content">
+          <div class="bot-name">Heartbeat Bot</div>
+          <div class="bot-bubble">${text}</div>
+        </div>
+      `;
+      $messages.appendChild(group);
+    } else {
+      const msg = document.createElement('div');
+      msg.className = 'user-msg';
+      msg.textContent = text;
+      $messages.appendChild(msg);
+    }
+    $messages.scrollTop = $messages.scrollHeight;
+  }
+
+  function handleBotResponse() {
+    setTimeout(() => {
+      const response = botResponses[Math.floor(Math.random() * botResponses.length)];
+      addMessage(response, true);
+    }, 1000);
+  }
+
+  $launcher.addEventListener('click', () => {
+    $window.classList.remove('hidden');
+    $launcher.classList.add('hidden');
+    
+    // Add initial message if empty
+    if ($messages.children.length === 0) {
+      addMessage("Xin chào! Tôi là chatbot hỗ trợ của Heartbeat. Bạn cần giúp gì không? 👋", true);
+    }
+  });
+
+  $close.addEventListener('click', () => {
+    $window.classList.add('hidden');
+    // Only show launcher if not on login screen
+    if (currentView !== 'login') {
+      $launcher.classList.remove('hidden');
+    }
+  });
+
+  const onSend = () => {
+    const text = $input.value.trim();
+    if (!text) return;
+    addMessage(text, false);
+    $input.value = '';
+    handleBotResponse();
+  };
+
+  $send.addEventListener('click', onSend);
+  $input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') onSend();
+  });
+}
+
 function init() {
   try {
     console.log('Heartbeat initializing...');
     setupNavigation();
+    initChatbot(); // Initialize Chatbot
+
     
     // Start on Login view
     switchView('login');
